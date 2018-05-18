@@ -1,0 +1,16 @@
+Index: application/controllers/Games.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- application/controllers/Games.php	(revision )
++++ application/controllers/Games.php	(revision )
+@@ -30,6 +30,8 @@
+         $tournament = $this->input->post('tournament');
+ 
+     }
++
++
+ }
+     /*$games[] = $this->users_model->getUpcomingGames();
+     if(is_array($games)){
