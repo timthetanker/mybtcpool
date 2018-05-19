@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Tim
- * Date: 11/05/2018
- * Time: 14:09
- */
 class Games extends CI_Controller {
     /*public $upcoming = array();*/
     public function make_selections($page = 'make_selections')
@@ -18,7 +12,7 @@ class Games extends CI_Controller {
     $data['title'] = 'Make Your Picks';
     $data['gameID'] = $this->games_model->getSelectedGame($this->uri->segment(3));
     $data['allGames'] = $this->games_model->displayTeamsByGameID($this->uri->segment(3));
-    //var_dump($data['allGames']);
+    var_dump($data['gameID']);
     $this->load->view('templates/header', $data);
     $this->load->view('games/'.$page, $data);
     //$this->load->view('templates/upcoming_fixtures_tbl', $data['games']);
@@ -26,9 +20,17 @@ class Games extends CI_Controller {
     }
 
     public function record_picks(){
-        $gameID = $this->input->post('gameID');
-        $tournament = $this->input->post('tournament');
-
+        if(!file_exists(APPPATH . '/views/games/record_picks.php')){
+            show_404();
+            echo 'ERROR...SENT WE ARE ALREADY WORKING ON IT! PLEASE TRY AGAIN IN 5-MINS';
+        }
+        $data['title'] = 'Uploading Your Selections';
+        $data['tournament'] = $tournament = $this->input->post('tournament')[0];
+        $data['round'] = $round = $this->input->post('round');
+        $this->load->view('templates/header', $data);
+        $this->load->view('games/record_picks', $data);
+        //$this->load->view('templates/upcoming_fixtures_tbl', $data['games']);
+        $this->load->view('templates/footer', $data);
     }
 
 

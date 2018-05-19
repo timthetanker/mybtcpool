@@ -52,7 +52,7 @@ function updateDiv() {
 </script>
 <div class="container">
 
-    <form name="userpicks" method="post" action="games/record_picks">
+    <?php echo form_open('games/record_picks'); ?>
         <?php
 
         if(!isset($gameID)){
@@ -303,8 +303,8 @@ function updateDiv() {
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div id="dispPicks"></div>
-                <button class="btn btn-primary submitBtn" name="submitBtn">Submit Picks</button>
+                <button type="submit" class="btn btn-primary submitBtn" name="submitBtn">Submit Picks</button>
             </div>
-    </form>
+            <?php echo form_close(); ?>
 </div>
 </div>
