@@ -3651,3 +3651,641 @@ DEBUG - 2018-05-18 16:43:48 --> Session: "sess_save_path" is empty; using "sessi
 ERROR - 2018-05-18 16:43:48 --> Severity: error --> Exception: Unable to locate the model you have specified: Users_model C:\wampp\www\btcpool\system\core\Loader.php 348
 DEBUG - 2018-05-18 16:43:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 ERROR - 2018-05-18 16:43:48 --> Severity: error --> Exception: Unable to locate the model you have specified: Users_model C:\wampp\www\btcpool\system\core\Loader.php 348
+DEBUG - 2018-05-18 23:25:32 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:25:32 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:25:32 --> Client sent : robots.txt
+DEBUG - 2018-05-18 23:25:32 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:25:32 --> No URI present. Default controller set.
+DEBUG - 2018-05-18 23:25:32 --> Redirecting to : robots.txt  --> pages/index/robots.txt
+DEBUG - 2018-05-18 23:25:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:25:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:25:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:25:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:25:32 --> Severity: error --> Exception: Unable to locate the model you have specified: Games_model C:\wampp\www\btcpool\system\core\Loader.php 348
+ERROR - 2018-05-18 23:25:32 --> Severity: error --> Exception: Unable to locate the model you have specified: Games_model C:\wampp\www\btcpool\system\core\Loader.php 348
+DEBUG - 2018-05-18 23:25:32 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:25:32 --> Client sent : favicon.ico
+DEBUG - 2018-05-18 23:25:32 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:25:32 --> Redirecting to : favicon.ico  --> pages/index/favicon.ico
+DEBUG - 2018-05-18 23:25:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:25:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:25:32 --> Severity: error --> Exception: Unable to locate the model you have specified: Games_model C:\wampp\www\btcpool\system\core\Loader.php 348
+DEBUG - 2018-05-18 23:26:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:26:36 --> No URI present. Default controller set.
+DEBUG - 2018-05-18 23:26:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:26:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:26:36 --> Total execution time: 0.0659
+DEBUG - 2018-05-18 23:26:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:26:36 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:26:36 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:26:36 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:26:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:26:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:26:36 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:26:37 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:26:37 --> Client sent : favicon.ico
+DEBUG - 2018-05-18 23:26:37 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:26:37 --> Redirecting to : favicon.ico  --> pages/index/favicon.ico
+DEBUG - 2018-05-18 23:26:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:26:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:26:37 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:26:40 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:26:40 --> Client sent : users/login
+DEBUG - 2018-05-18 23:26:40 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:26:40 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:26:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:26:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:26:40 --> Total execution time: 0.0593
+DEBUG - 2018-05-18 23:26:40 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:26:40 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:26:40 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:26:40 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:26:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:26:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:26:40 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:26:41 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:26:41 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:26:41 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:26:41 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:26:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:26:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:26:41 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:26:46 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:26:46 --> Client sent : users/login
+DEBUG - 2018-05-18 23:26:46 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:26:46 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:26:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:26:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:26:46 --> Severity: Notice --> Undefined property: Users::$db C:\wampp\www\btcpool\system\core\Model.php 73
+ERROR - 2018-05-18 23:26:46 --> Severity: Error --> Call to a member function where() on null C:\wampp\www\btcpool\application\models\Users_model.php 20
+DEBUG - 2018-05-18 23:27:33 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:27:33 --> Client sent : users/login
+DEBUG - 2018-05-18 23:27:33 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:27:33 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:27:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:27:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:27:33 --> Total execution time: 0.0640
+DEBUG - 2018-05-18 23:27:33 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:27:33 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:27:33 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:27:33 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:27:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:27:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:27:33 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:27:34 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:27:34 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:27:34 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:27:34 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:27:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:27:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:27:34 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:27:34 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:27:34 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:27:34 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:27:34 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:27:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:27:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:27:34 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:27:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:27:36 --> Client sent : users/login
+DEBUG - 2018-05-18 23:27:36 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:27:36 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:27:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:27:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:27:37 --> Severity: Notice --> Undefined property: Users::$db C:\wampp\www\btcpool\system\core\Model.php 73
+ERROR - 2018-05-18 23:27:37 --> Severity: Error --> Call to a member function where() on null C:\wampp\www\btcpool\application\models\Users_model.php 20
+DEBUG - 2018-05-18 23:29:21 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:29:21 --> Client sent : users/login
+DEBUG - 2018-05-18 23:29:21 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:29:21 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:29:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:29:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:29:21 --> Total execution time: 0.0587
+DEBUG - 2018-05-18 23:29:21 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:29:21 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:29:21 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:29:21 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:29:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:29:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:29:21 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:29:21 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:29:21 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:29:21 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:29:21 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:29:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:29:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:29:21 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:29:22 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:29:22 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:29:22 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:29:22 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:29:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:29:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:29:22 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:29:24 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:29:24 --> Client sent : users/login
+DEBUG - 2018-05-18 23:29:24 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:29:24 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:29:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:29:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:29:24 --> Severity: Notice --> Undefined property: Users::$db C:\wampp\www\btcpool\system\core\Model.php 73
+ERROR - 2018-05-18 23:29:24 --> Severity: Error --> Call to a member function where() on null C:\wampp\www\btcpool\application\models\Users_model.php 20
+DEBUG - 2018-05-18 23:33:03 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:33:03 --> Client sent : users/login
+DEBUG - 2018-05-18 23:33:03 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:33:03 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:33:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:33:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:33:03 --> Total execution time: 0.0988
+DEBUG - 2018-05-18 23:33:03 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:33:03 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:33:03 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:33:03 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:33:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:33:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:33:04 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:33:04 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:33:04 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:33:04 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:33:04 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:33:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:33:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:33:04 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:33:07 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:33:07 --> Client sent : users/login
+DEBUG - 2018-05-18 23:33:07 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:33:07 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:33:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:33:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:33:07 --> Query error: Unknown column 'password' in 'where clause' - Invalid query: SELECT *
+FROM `users`
+WHERE `username` = 'timthetank'
+AND `password` = 'root'
+DEBUG - 2018-05-18 23:34:21 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:34:21 --> Client sent : users/login
+DEBUG - 2018-05-18 23:34:21 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:34:21 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:34:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:34:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:34:21 --> Total execution time: 0.0813
+DEBUG - 2018-05-18 23:34:22 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:34:22 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:34:22 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:34:22 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:34:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:34:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:34:22 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:34:22 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:34:22 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:34:22 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:34:22 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:34:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:34:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:34:22 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:34:22 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:34:22 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:34:22 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:34:22 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:34:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:34:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:34:22 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:34:25 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:34:25 --> Client sent : users/login
+DEBUG - 2018-05-18 23:34:25 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:34:25 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:34:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:34:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:34:25 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:34:25 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:34:25 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:34:25 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:34:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:34:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:34:25 --> Severity: Error --> Call to undefined method Games_model::getUpcomingGames() C:\wampp\www\btcpool\application\controllers\Users.php 99
+DEBUG - 2018-05-18 23:38:56 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:38:56 --> Client sent : users/login
+DEBUG - 2018-05-18 23:38:56 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:38:56 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:38:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:38:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:38:56 --> Total execution time: 0.0797
+DEBUG - 2018-05-18 23:38:56 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:38:56 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:38:56 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:38:56 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:38:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:38:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:38:56 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:38:57 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:38:57 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:38:57 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:38:57 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:38:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:38:57 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:38:57 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:38:57 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:38:57 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:38:57 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:38:57 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:38:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:38:57 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:38:57 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:38:59 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:38:59 --> Client sent : users/login
+DEBUG - 2018-05-18 23:38:59 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:38:59 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:38:59 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:38:59 --> Client sent : robots.txt
+DEBUG - 2018-05-18 23:38:59 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:38:59 --> Redirecting to : robots.txt  --> pages/index/robots.txt
+DEBUG - 2018-05-18 23:38:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:38:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:38:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:38:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:38:59 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:38:59 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:38:59 --> Client sent : pages/index
+DEBUG - 2018-05-18 23:38:59 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:38:59 --> Redirecting to : pages/index  --> pages/index/pages/index
+DEBUG - 2018-05-18 23:38:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:38:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:38:59 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:39:56 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:39:56 --> Client sent : pages/index
+DEBUG - 2018-05-18 23:39:56 --> Route found : pages/index  --> pages/index
+DEBUG - 2018-05-18 23:39:56 --> Redirecting to : pages/index  --> pages/index
+DEBUG - 2018-05-18 23:39:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:39:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:39:56 --> Total execution time: 0.0662
+DEBUG - 2018-05-18 23:39:56 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:39:56 --> Client sent : pages/%3C
+DEBUG - 2018-05-18 23:39:56 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:39:56 --> Redirecting to : pages/%3C  --> pages/index/pages/%3C
+DEBUG - 2018-05-18 23:39:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:39:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:39:56 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:39:56 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:39:56 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:39:56 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:39:56 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:39:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:39:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:39:56 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:40:12 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:40:12 --> Client sent : about
+DEBUG - 2018-05-18 23:40:12 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:40:12 --> Redirecting to : about  --> pages/index/about
+DEBUG - 2018-05-18 23:40:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:40:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:40:12 --> Total execution time: 0.0645
+DEBUG - 2018-05-18 23:40:13 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:40:13 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:40:13 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:40:13 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:40:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:40:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:40:13 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:40:14 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:40:14 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:40:14 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:40:14 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:40:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:40:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:40:14 --> Severity: Error --> Call to undefined method Games_model::getUpcomingGames() C:\wampp\www\btcpool\application\controllers\Users.php 99
+DEBUG - 2018-05-18 23:51:50 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:51:50 --> Client sent : about
+DEBUG - 2018-05-18 23:51:50 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:51:50 --> Redirecting to : about  --> pages/index/about
+DEBUG - 2018-05-18 23:51:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:51:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:51:50 --> Severity: Parsing Error --> syntax error, unexpected end of file, expecting function (T_FUNCTION) C:\wampp\www\btcpool\application\models\Games_model.php 26
+DEBUG - 2018-05-18 23:52:44 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:52:44 --> Client sent : pages/index
+DEBUG - 2018-05-18 23:52:44 --> Route found : pages/index  --> pages/index
+DEBUG - 2018-05-18 23:52:44 --> Redirecting to : pages/index  --> pages/index
+DEBUG - 2018-05-18 23:52:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:52:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:52:44 --> Total execution time: 0.0740
+DEBUG - 2018-05-18 23:52:44 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:52:44 --> Client sent : pages/%3C
+DEBUG - 2018-05-18 23:52:44 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:52:44 --> Redirecting to : pages/%3C  --> pages/index/pages/%3C
+DEBUG - 2018-05-18 23:52:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:52:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:52:44 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:52:45 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:52:45 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:52:45 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:52:45 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:52:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:52:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:52:45 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:52:48 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:52:48 --> Client sent : about
+DEBUG - 2018-05-18 23:52:48 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:52:48 --> Redirecting to : about  --> pages/index/about
+DEBUG - 2018-05-18 23:52:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:52:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:52:48 --> Total execution time: 0.0584
+DEBUG - 2018-05-18 23:52:48 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:52:48 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:52:48 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:52:48 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:52:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:52:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:52:48 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:52:50 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:52:50 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:52:50 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:52:50 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:52:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:52:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:52:50 --> Severity: Error --> Call to undefined method Games_model::num_rows() C:\wampp\www\btcpool\application\models\Games_model.php 19
+DEBUG - 2018-05-18 23:53:14 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:14 --> Client sent : about
+DEBUG - 2018-05-18 23:53:14 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:53:14 --> Redirecting to : about  --> pages/index/about
+DEBUG - 2018-05-18 23:53:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:53:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:53:14 --> Total execution time: 0.0708
+DEBUG - 2018-05-18 23:53:15 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:15 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:53:15 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:53:15 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:53:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:53:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:53:15 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:53:16 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:16 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:53:16 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:53:16 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:53:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:53:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:53:16 --> Severity: Error --> Call to undefined method CI_DB_mysqli_result::results() C:\wampp\www\btcpool\application\models\Games_model.php 20
+DEBUG - 2018-05-18 23:53:31 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:31 --> Client sent : about
+DEBUG - 2018-05-18 23:53:31 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:53:31 --> Redirecting to : about  --> pages/index/about
+DEBUG - 2018-05-18 23:53:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:53:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:53:31 --> Total execution time: 0.0656
+DEBUG - 2018-05-18 23:53:31 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:31 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:53:31 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:53:31 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:53:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:53:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:53:31 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:53:34 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:34 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:53:34 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:53:34 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:53:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:53:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:53:34 --> Severity: Notice --> Undefined variable: user_data C:\wampp\www\btcpool\application\views\users\dashboard.php 2
+ERROR - 2018-05-18 23:53:34 --> Severity: Notice --> Undefined variable: user_data C:\wampp\www\btcpool\application\views\users\dashboard.php 3
+DEBUG - 2018-05-18 23:53:34 --> Total execution time: 0.0858
+DEBUG - 2018-05-18 23:53:34 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:34 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:53:34 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:53:34 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:53:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:53:34 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:34 --> Client sent : public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:53:34 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:53:34 --> Redirecting to : public/imgs/sport/AM%20Football.png  --> pages/index/public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:53:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:53:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2018-05-18 23:53:34 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:53:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:53:34 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:53:34 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:53:34 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:53:34 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:53:34 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:53:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:53:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:53:34 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:55:21 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:21 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:55:21 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:55:21 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:55:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:55:21 --> Total execution time: 0.0760
+DEBUG - 2018-05-18 23:55:21 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:21 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:55:21 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:21 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:55:21 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:21 --> Client sent : public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:55:21 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:21 --> Redirecting to : public/imgs/sport/AM%20Football.png  --> pages/index/public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:55:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:55:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:55:21 --> 404 Page Not Found:
+ERROR - 2018-05-18 23:55:21 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:55:21 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:21 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:55:21 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:21 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:55:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:55:21 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:55:31 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:31 --> Client sent : games/make_selections/380
+DEBUG - 2018-05-18 23:55:31 --> Route found : games/make_selections/(:any)  --> games/make_selections
+DEBUG - 2018-05-18 23:55:31 --> Redirecting to : games/make_selections/380  --> games/make_selections
+DEBUG - 2018-05-18 23:55:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:55:31 --> Severity: Error --> Call to undefined method Games_model::getSelectedGame() C:\wampp\www\btcpool\application\controllers\Games.php 19
+DEBUG - 2018-05-18 23:55:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:36 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:55:36 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:55:36 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:55:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:55:36 --> Total execution time: 0.0726
+DEBUG - 2018-05-18 23:55:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:36 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:55:36 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:36 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:55:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:36 --> Client sent : public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:55:36 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:36 --> Redirecting to : public/imgs/sport/AM%20Football.png  --> pages/index/public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:55:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:55:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:55:36 --> 404 Page Not Found:
+ERROR - 2018-05-18 23:55:36 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:55:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:36 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:55:36 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:36 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:55:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:55:36 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:55:40 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:40 --> Client sent : games/make_selections/86
+DEBUG - 2018-05-18 23:55:40 --> Route found : games/make_selections/(:any)  --> games/make_selections
+DEBUG - 2018-05-18 23:55:40 --> Redirecting to : games/make_selections/86  --> games/make_selections
+DEBUG - 2018-05-18 23:55:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:55:40 --> Severity: Error --> Call to undefined method Games_model::getSelectedGame() C:\wampp\www\btcpool\application\controllers\Games.php 19
+DEBUG - 2018-05-18 23:55:46 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:46 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:55:46 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:55:46 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:55:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:55:46 --> Total execution time: 0.0989
+DEBUG - 2018-05-18 23:55:46 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:46 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:55:46 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:46 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:55:46 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:46 --> Client sent : public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:55:46 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:46 --> Redirecting to : public/imgs/sport/AM%20Football.png  --> pages/index/public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:55:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:55:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:55:46 --> 404 Page Not Found:
+ERROR - 2018-05-18 23:55:46 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:55:46 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:55:46 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:55:46 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:55:46 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:55:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:55:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:55:46 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:09 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:09 --> Client sent : games/make_selections/86
+DEBUG - 2018-05-18 23:56:09 --> Route found : games/make_selections/(:any)  --> games/make_selections
+DEBUG - 2018-05-18 23:56:09 --> Redirecting to : games/make_selections/86  --> games/make_selections
+DEBUG - 2018-05-18 23:56:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:09 --> Severity: Error --> Call to undefined method Games_model::getSelectedGame() C:\wampp\www\btcpool\application\controllers\Games.php 19
+DEBUG - 2018-05-18 23:56:12 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:12 --> Client sent : users/dashboard
+DEBUG - 2018-05-18 23:56:12 --> Route found : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:56:12 --> Redirecting to : users/dashboard  --> users/dashboard
+DEBUG - 2018-05-18 23:56:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:56:12 --> Total execution time: 0.0727
+DEBUG - 2018-05-18 23:56:12 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:12 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:56:12 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:12 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:56:12 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:12 --> Client sent : public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:56:12 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:12 --> Redirecting to : public/imgs/sport/AM%20Football.png  --> pages/index/public/imgs/sport/AM%20Football.png
+DEBUG - 2018-05-18 23:56:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:56:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:12 --> 404 Page Not Found:
+ERROR - 2018-05-18 23:56:12 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:13 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:13 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:13 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:13 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:13 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:35 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:35 --> Client sent : users/logout
+DEBUG - 2018-05-18 23:56:35 --> Route found : users/logout  --> users/logout
+DEBUG - 2018-05-18 23:56:35 --> Redirecting to : users/logout  --> users/logout
+DEBUG - 2018-05-18 23:56:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:56:36 --> Total execution time: 0.0795
+DEBUG - 2018-05-18 23:56:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:36 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:56:36 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:36 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:56:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:36 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:36 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:36 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:36 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:36 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:36 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:38 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:39 --> Client sent : users/logout
+DEBUG - 2018-05-18 23:56:39 --> Route found : users/logout  --> users/logout
+DEBUG - 2018-05-18 23:56:39 --> Redirecting to : users/logout  --> users/logout
+DEBUG - 2018-05-18 23:56:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:56:39 --> Total execution time: 0.0646
+DEBUG - 2018-05-18 23:56:39 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:39 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:56:39 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:39 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:56:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:39 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:39 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:39 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:39 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:39 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:39 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:41 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:41 --> Client sent : users/login
+DEBUG - 2018-05-18 23:56:41 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:56:41 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:56:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:56:41 --> Total execution time: 0.2393
+DEBUG - 2018-05-18 23:56:41 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:41 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:56:41 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:41 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:56:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:41 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:41 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:41 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:41 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:41 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:41 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:44 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:44 --> Client sent : users/login
+DEBUG - 2018-05-18 23:56:44 --> Route found : users/login  --> users/login
+DEBUG - 2018-05-18 23:56:44 --> Redirecting to : users/login  --> users/login
+DEBUG - 2018-05-18 23:56:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:56:44 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:44 --> Client sent : users/failed
+DEBUG - 2018-05-18 23:56:44 --> Route found : users/failed  --> users/failed
+DEBUG - 2018-05-18 23:56:44 --> Redirecting to : users/failed  --> users/failed
+DEBUG - 2018-05-18 23:56:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2018-05-18 23:56:44 --> Total execution time: 0.0605
+DEBUG - 2018-05-18 23:56:44 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:44 --> Client sent : users/%3C
+DEBUG - 2018-05-18 23:56:44 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:44 --> Redirecting to : users/%3C  --> pages/index/users/%3C
+DEBUG - 2018-05-18 23:56:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:45 --> 404 Page Not Found:
+DEBUG - 2018-05-18 23:56:45 --> UTF-8 Support Enabled
+DEBUG - 2018-05-18 23:56:45 --> Client sent : public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:45 --> Route found : (:any)  --> pages/index/$1
+DEBUG - 2018-05-18 23:56:45 --> Redirecting to : public/imgs/bg.jpg  --> pages/index/public/imgs/bg.jpg
+DEBUG - 2018-05-18 23:56:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-05-18 23:56:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2018-05-18 23:56:45 --> 404 Page Not Found: 

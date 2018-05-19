@@ -44,6 +44,7 @@ $route['games/make_selections'] = 'games/make_selections';
 $route['games/make_selections/(:any)'] = 'games/make_selections'; //any for passing parameter in this case
 
 
+$route['pages/index'] = 'pages/index';
 $route['(:any)'] = 'pages/index/$1';
 $route['default_controller'] = 'pages/index';
 $route['404_override'] = '';
