@@ -4,6 +4,7 @@
     -webkit-text-size-adjust: 100%
 }
 body {
+    color: #eaeced;
     background: url('../imgs/bg.jpg') no-repeat top center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

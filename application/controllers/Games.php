@@ -19,7 +19,8 @@ class Games extends CI_Controller {
     $this->load->view('templates/footer', $data);
     }
 
-    public function record_picks(){
+    public function record_picks()
+    {
         date_default_timezone_set('Africa/Johannesburg');
         if(!file_exists(APPPATH . '/views/games/record_picks.php')){
             show_404();
@@ -42,8 +43,9 @@ class Games extends CI_Controller {
         //HERE WE CHECK iF EVENT HAS STARTED IF YES STOP else PROCEED
         $hasStarted = $this->games_model->has_started($data['tournament'], $data['round']);
         foreach ($hasStarted as $index => $game) {
-            $timeAndDate = explode(' ', $game['gameTimeEastern']);
+            $timeAndDate = explode(' ', $game->gameTimeEastern);
             $eventDate = $timeAndDate[0];
+            var_dump($eventDate);
             $eventTime = $timeAndDate[1];
             if(strtotime($curDate) > strtotime($eventDate)){
                 echo '<h1> SORRY, CURRENT EVENT HAS ALLREADY STARTED</h1>';
@@ -58,21 +60,33 @@ class Games extends CI_Controller {
         //ONLY ONE ENTRY ALLOWED PER PLAYER
         //HERE WE CHECK IF PLAYER HAS ENTERED OR NOT
 
+        $data['userID'] = $this->session->userID;
+        $entered = $this->games_model->hasEntered($data['userID'], $data['tournament'], $data['round']);
+        if($entered === true){
 
-        $data['picks'] = array();
-        //GETTING SELECTIONS ADDING TO ARRAY
-        foreach ($this->input->post('picks') as $id => $winner) {
-            $data['picks'][$id] = array('pick' => $teamsel[] = $winner, 'gameID' => $this->input->post('gameID')[$id], //match Id
-                'points' => $this->input->post('score')[$id], //score;
-                'tournament' => $tournament = $this->input->post('tournament')[$id], 'weekNum' => $this->input->post('round')[$id]);
+            $this->load->view('templates/header', $data);
+            $this->load->view('games/has_entered', $data);
+            //$this->load->view('templates/upcoming_fixtures_tbl', $data['games']);
+            $this->load->view('templates/footer', $data);
         }
-        //Transfering data to Model
-        $this->games_model->record_picks($data['picks']);
+        if($entered === false){
+            //USER NOT ENTERED
+            //UPLOAD RESULTS
+            $data['picks'] = array();
+            //GETTING SELECTIONS ADDING TO ARRAY
+            foreach ($this->input->post('picks') as $id => $winner) {
+                $data['picks'][$id] = array('pick' => $teamsel[] = $winner, 'gameID' => $this->input->post('gameID')[$id], //match Id
+                    'points' => $this->input->post('score')[$id], //score;
+                    'tournament' => $tournament = $this->input->post('tournament')[$id], 'weekNum' => $this->input->post('round')[$id]);
+            }
+            //Transfering data to Model
+            $this->games_model->record_picks($data['picks']);
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('games/record_picks', $data);
-        //$this->load->view('templates/upcoming_fixtures_tbl', $data['games']);
-        $this->load->view('templates/footer', $data);
+            $this->load->view('templates/header', $data);
+            $this->load->view('games/record_picks', $data);
+            //$this->load->view('templates/upcoming_fixtures_tbl', $data['games']);
+            $this->load->view('templates/footer', $data);
+        }
     }
 }
     /*$games[] = $this->users_model->getUpcomingGames();

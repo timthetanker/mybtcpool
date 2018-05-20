@@ -61,7 +61,7 @@ class Games_model extends CI_Model {
     public function record_picks($data)
     {
         foreach ($data as $key => $value) {
-            $userID = $data->userID;
+            $userID = $this->session->userID;
             $pickedTeam = $value['pick'];
             $gameID = $value['gameID'];
             $points = $value['points'];
@@ -84,8 +84,20 @@ class Games_model extends CI_Model {
 
         $sql = "SELECT * FROM schedule WHERE tournament = '$tournament' AND weekNum = '$round'";
         $stmnt = $this->db->query($sql);
-        if($this->num_rows > 0){
+        if($stmnt->num_rows() > 0){
             return $stmnt->result();
+        }
+        return false;
+    }
+
+    public function hasEntered($userID, $tournament, $weekNum)
+    {
+        $sql = "select userID, tournament, weekNum
+			FROM picks
+			WHERE userID = '$userID' AND tournament = '$tournament' AND weekNum = '$weekNum'";
+        $stmnt = $this->db->query($sql);
+        if($stmnt->num_rows() > 0){
+            return true;
         }
         return false;
     }
