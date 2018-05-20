@@ -18,14 +18,12 @@ class Users_model extends CI_Model {
     // Log user in
     public function login($username, $password)
     {
-        // Validate
         $this->db->where('username', $username);
         $this->db->where('pword', $password);
-
         $stmnt = $this->db->get('users');
-
         if($stmnt->num_rows() == 1){
-            return $stmnt->row(1);
+            $user_id = $stmnt->row()->userID;
+            return $user_id;
         } else {
             return false;
         }

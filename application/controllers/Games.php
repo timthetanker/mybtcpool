@@ -42,8 +42,22 @@ class Games extends CI_Controller {
         //HERE WE CHECK iF EVENT HAS STARTED IF YES STOP else PROCEED
         $hasStarted = $this->games_model->has_started($data['tournament'], $data['round']);
         foreach ($hasStarted as $index => $game) {
-            $game['gameTimeEastern'];
+            $timeAndDate = explode(' ', $game['gameTimeEastern']);
+            $eventDate = $timeAndDate[0];
+            $eventTime = $timeAndDate[1];
+            if(strtotime($curDate) > strtotime($eventDate)){
+                echo '<h1> SORRY, CURRENT EVENT HAS ALLREADY STARTED</h1>';
+                die();
+            }//if
+            else if(strtotime($eventDate) == strtotime($curDate) && strtotime($curTime) >= strtotime($eventTime)){
+                echo '<h1>SORRY, CURRENT ROUND ALLREADY STARTED</h1>';
+                die();
+            }//else if
         }
+
+        //ONLY ONE ENTRY ALLOWED PER PLAYER
+        //HERE WE CHECK IF PLAYER HAS ENTERED OR NOT
+
 
         $data['picks'] = array();
         //GETTING SELECTIONS ADDING TO ARRAY
