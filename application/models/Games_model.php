@@ -57,6 +57,39 @@ class Games_model extends CI_Model {
         }//if
         return false;
     }
-}
+
+    public function record_picks($data)
+    {
+        foreach ($data as $key => $value) {
+            $userID = $data->userID;
+            $pickedTeam = $value['pick'];
+            $gameID = $value['gameID'];
+            $points = $value['points'];
+            $tournament = $value['tournament'];
+            $weekNum = $value['weekNum'];
+
+
+            $sql = "INSERT INTO picks(userID, gameID, points, sport, tournament, weekNum, pick) 
+                    VALUES ('$userID', '$gameID', '$points', 'rugby', '$tournament',  '$weekNum', '$pickedTeam') ";
+            $stmnt = $this->db->query($sql);
+
+            foreach ($value as $pick) {
+                echo $pick;
+            }
+        }
+    }
+
+    public function has_started($tournament, $round)
+    {
+
+        $sql = "SELECT * FROM schedule WHERE tournament = '$tournament' AND weekNum = '$round'";
+        $stmnt = $this->db->query($sql);
+        if($this->num_rows > 0){
+            return $stmnt->result();
+        }
+        return false;
+    }
+}//classs
+
 
 
