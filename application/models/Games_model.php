@@ -74,7 +74,7 @@ class Games_model extends CI_Model {
             $stmnt = $this->db->query($sql);
 
             foreach ($value as $pick) {
-                echo $pick;
+                $pick;
             }
         }
     }

@@ -1,8 +1,7 @@
 <?php
 echo $title;
-var_dump($picks);
-print_r($picks);
 ?>
+
 <style type="text/css">
     table {
     }
@@ -40,7 +39,7 @@ print_r($picks);
         <div class="row">
             <div class="col-md-12 col-xs-12">
                 <div class="row">
-                    <div class="col-xs-12 col-md-12 text-center" style="margin-top:100px;">
+                    <div class="col-xs-12 col-md-12 text-center" style="/*margin-top:100px;*/">
                         <h3 style="color: red"><?php echo $this->session->username ?> here are your picks. GOOD
                             LUCK! </h3>
                         <style>td {
@@ -59,15 +58,22 @@ print_r($picks);
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>
-                                    <img src="imgs/teams/<?php echo $pick ?>.gif">
-                                    <?php echo $pick ?>
-                                </td>
-                                <td>
-                                    By <span class="numberSpan"> <?php echo $points ?> </span> Points
-                                </td>
-                            </tr>
+                            <?php
+                            foreach ($picks as $key => $result) {
+                                ?>
+                                <tr>
+                                    <td>
+                                        <img src="<?php echo base_url('public/imgs/teams/' . $result['pick']); ?>.gif"
+                                             alt="<?php echo $result['pick'] ?>"/>
+                                        <?php echo $result['pick'] ?>
+                                    </td>
+                                    <td>
+                                        By <span class="numberSpan"> <?php echo $result['points'] ?> </span> Points
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
                             </tbody>
                         </table>
                     </div>

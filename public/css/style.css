@@ -4,7 +4,7 @@
     -webkit-text-size-adjust: 100%
 }
 body {
-    color: #eaeced;
+    color: black;
     background: url('../imgs/bg.jpg') no-repeat top center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -149,6 +149,7 @@ body {
 }
 
 .card{
+    color: black;
     background: #ECF0F1;
     box-shadow: 0 1px 2px rgba(0,0,0,0.3);
     margin: 10px;
@@ -460,6 +461,7 @@ Responsive navbar-brand image CSS
 }
 @media (min-width: 992px) {
     .container {
+        color: black;
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
@@ -1916,6 +1918,7 @@ Responsive navbar-brand image CSS
 }
 @media (min-width: 992px) {
     .container {
+        color: black;
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
@@ -3526,6 +3529,7 @@ body{
 }
 
 .container {
+    color: black;
     max-width: 1020px;
     margin: 0px auto;
     background: #ecf0f1;
@@ -4949,6 +4953,7 @@ table.data td, table.data-nav-tray td, table.data th, table.data-nav-tray th {
 }
 
 .container {
+    color: black;
     max-width: 1020px;
     margin: 0px auto;
     background: #ecf0f1;

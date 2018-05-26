@@ -26,7 +26,7 @@ class Games extends CI_Controller {
             show_404();
             echo 'ERROR...SENT WE ARE ALREADY WORKING ON IT! PLEASE TRY AGAIN IN 5-MINS';
         }
-        $data['title'] = 'Uploading Your Selections';
+        $data['title'] = 'Saving Picks';
         $data['tournament'] = $tournament = $this->input->post('tournament')[0];
         $data['round'] = $round = $this->input->post('round')[0];
         //Ensure tournament and round is set
@@ -41,6 +41,7 @@ class Games extends CI_Controller {
         $curDate = date('Y-m-d');
 
         //HERE WE CHECK iF EVENT HAS STARTED IF YES STOP else PROCEED
+        #TODO in dashboard if current event is in progress, show next round rather than current in progress round
         $hasStarted = $this->games_model->has_started($data['tournament'], $data['round']);
         foreach ($hasStarted as $index => $game) {
             $timeAndDate = explode(' ', $game->gameTimeEastern);
@@ -79,6 +80,7 @@ class Games extends CI_Controller {
                     'points' => $this->input->post('score')[$id], //score;
                     'tournament' => $tournament = $this->input->post('tournament')[$id], 'weekNum' => $this->input->post('round')[$id]);
             }
+
             //Transfering data to Model
             $this->games_model->record_picks($data['picks']);
 
