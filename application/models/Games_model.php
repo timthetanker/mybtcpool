@@ -35,12 +35,45 @@ class Games_model extends CI_Model {
     }
 
 
+    /* public function displayTeamsByGameID($gameID)
+     {
+         #TODO add check to prevent submission where tournament has started
+         /*$sql = "SELECT schedule.*, teams.* FROM schedule
+               JOIN teams ON schedule.homeID = teams.teamCode OR schedule.visitorID = teams.teamCode
+               WHERE schedule.gameID = '$gameID'";*/
+    /* $sql ="select * from schedule s
+      INNER join teams t1 on s.homeID = t1.teamCode
+      INNER JOIN teams t2 on s.visitorID = t2.teamCode
+      WHERE "
+
+     $stmnt = $this->db->query($sql);
+
+     if($stmnt->num_rows() > 0){
+         foreach ($stmnt->result_array() as $row) {
+             $weekNum = $row['weekNum'];
+             $sport = $row['sport'];
+             $tournament = $row['tournament'];
+         }
+     } else {
+         return false;
+     }
+     $sql = "SELECT schedule.*, teams.* FROM schedule
+           JOIN teams ON schedule.homeID = teams.teamCode OR schedule.visitorID = teams.teamCode
+           WHERE schedule.weekNum = '$weekNum' AND tournament = '$tournament' ORDER BY gameTimeEastern ASC";
+     //$sql = "SELECT * FROM schedule WHERE weekNum = '$weekNum' AND sport = '$sport' AND tournament = '$tournament' ORDER BY gameTimeEastern ASC";
+     $stmnt = $this->db->query($sql);
+     if($stmnt->num_rows() > 0){
+         return $stmnt->result();
+     }//if
+     return false;
+ }*/
+
+
     public function displayTeamsByGameID($gameID)
     {
         #TODO add check to prevent submission where tournament has started
         $sql = "SELECT * FROM schedule WHERE gameID = '$gameID'";
         $stmnt = $this->db->query($sql);
-
         if($stmnt->num_rows() > 0){
             foreach ($stmnt->result_array() as $row) {
                 $weekNum = $row['weekNum'];
@@ -90,14 +123,26 @@ class Games_model extends CI_Model {
         return false;
     }
 
+    //check if user has enetred competition
     public function hasEntered($userID, $tournament, $weekNum)
     {
-        $sql = "select userID, tournament, weekNum
-			FROM picks
+        $sql = "select * FROM picks
 			WHERE userID = '$userID' AND tournament = '$tournament' AND weekNum = '$weekNum'";
         $stmnt = $this->db->query($sql);
         if($stmnt->num_rows() > 0){
             return true;
+        }
+        return false;
+    }
+
+    //get picks for specific tournament
+    public function getPicks($userID, $tournament, $weekNum)
+    {
+        $sql = "select * FROM picks
+			WHERE userID = '$userID' AND tournament = '$tournament' AND weekNum = '$weekNum'";
+        $stmnt = $this->db->query($sql);
+        if($stmnt->num_rows() > 0){
+            return $stmnt->result();
         }
         return false;
     }

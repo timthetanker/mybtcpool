@@ -106,10 +106,18 @@ function updateDiv() {
                             <div class="home-team">
                                 <?php $homeTeam = $game->homeID;
                                 ucfirst($homeTeam);
-                                ?>
-                                <img src="<?php echo base_url('public/imgs/teams/'.$homeTeam); ?>.gif" alt="<?php echo $homeTeam ?>"/>
+                                if($game->sport == 'soccer'){
+                                    $extension = '.svg';
+                                    $img = "<svg height='200px' width='200px' xmlns:" . base_url('public/imgs/svgs/' . $homeTeam) . ".svg</svg>";
 
+                                } else {
+                                    $img = "<img src=" . base_url('public/imgs/teams/' . $homeTeam) . ".gif  alt='$homeTeam'/>";
+                                }
+                                ?>
+
+                                <?php echo $img ?>
                                 <br/>
+
                                 <div class="team-name"><?php echo $game->homeID ?></div>
                             </div>
                             <div class="selector">

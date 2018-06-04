@@ -1,5 +1,6 @@
 <?php
 
+#TODO change pick format for soccer, cricket etc
 class Games extends CI_Controller {
     /*public $upcoming = array();*/
     public function make_selections($page = 'make_selections')
@@ -42,35 +43,37 @@ class Games extends CI_Controller {
 
         //HERE WE CHECK iF EVENT HAS STARTED IF YES STOP else PROCEED
         #TODO in dashboard if current event is in progress, show next round rather than current in progress round
+        #TODO re-enable disabling currently for debugging
         $hasStarted = $this->games_model->has_started($data['tournament'], $data['round']);
-        foreach ($hasStarted as $index => $game) {
-            $timeAndDate = explode(' ', $game->gameTimeEastern);
-            $eventDate = $timeAndDate[0];
-            var_dump($eventDate);
-            $eventTime = $timeAndDate[1];
-            if(strtotime($curDate) > strtotime($eventDate)){
-                echo '<h1> SORRY, CURRENT EVENT HAS ALLREADY STARTED</h1>';
-                die();
-            }//if
-            else if(strtotime($eventDate) == strtotime($curDate) && strtotime($curTime) >= strtotime($eventTime)){
-                echo '<h1>SORRY, CURRENT ROUND ALLREADY STARTED</h1>';
-                die();
-            }//else if
-        }
+        /* foreach ($hasStarted as $index => $game) {
+              $timeAndDate = explode(' ', $game->gameTimeEastern);
+              $eventDate = $timeAndDate[0];
+              //var_dump($eventDate);
+              $eventTime = $timeAndDate[1];
+              if(strtotime($curDate) > strtotime($eventDate)){
+                  echo '<h1> SORRY, CURRENT EVENT HAS ALLREADY STARTED</h1>';
+                  die();
+              }//if
+              else if(strtotime($eventDate) == strtotime($curDate) && strtotime($curTime) >= strtotime($eventTime)){
+                  echo '<h1>SORRY, CURRENT ROUND ALLREADY STARTED</h1>';
+                  die();
+              }//else if
+          }*/
 
         //ONLY ONE ENTRY ALLOWED PER PLAYER
         //HERE WE CHECK IF PLAYER HAS ENTERED OR NOT
 
         $data['userID'] = $this->session->userID;
-        $entered = $this->games_model->hasEntered($data['userID'], $data['tournament'], $data['round']);
-        if($entered === true){
-
+        $hasEntered = $this->games_model->hasEntered($data['userID'], $data['tournament'], $data['round']);
+        if($hasEntered === true){
+            $getPicks = $this->games_model->getPicks($data['userID'], $data['tournament'], $data['round']);
+            $data['recordedPicks'] = $getPicks;
             $this->load->view('templates/header', $data);
             $this->load->view('games/has_entered', $data);
             //$this->load->view('templates/upcoming_fixtures_tbl', $data['games']);
             $this->load->view('templates/footer', $data);
         }
-        if($entered === false){
+        if($hasEntered === false){
             //USER NOT ENTERED
             //UPLOAD RESULTS
             $data['picks'] = array();
@@ -91,9 +94,3 @@ class Games extends CI_Controller {
         }
     }
 }
-    /*$games[] = $this->users_model->getUpcomingGames();
-    if(is_array($games)){
-        foreach ($games as $game){
-            $data['games'] = array('gameID' => $game['gameID'], 'weekNum' =>$game['weekNum'], 'homeID' => $game['homeID'], 'visitorID' => $game['visitorID'] );
-         }
-        }*/

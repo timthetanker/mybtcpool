@@ -74,7 +74,7 @@ class Users extends CI_Controller {
         if(!file_exists(APPPATH . '/views/users/' . $page . '.php')){
             show_404();
         }
-        $data['title'] ='WELCOME USER';
+        $data['title'] = 'WELCOME USER';
         $this->load->view('templates/header', $data);
         $this->load->view('users/' . $page, $data);
         $this->load->view('templates/footer', $data);
@@ -95,8 +95,7 @@ class Users extends CI_Controller {
             $this->load->view('templates/header');
             $this->load->view('users/login', $data);
             $this->load->view('templates/footer');
-        }
-        else {
+        } else {
             $data['games'] = $this->games_model->getUpcomingGames();
             $data['title'] = 'WELCOME USER';
             $this->load->view('templates/header', $data);
@@ -112,7 +111,7 @@ class Users extends CI_Controller {
         if(!file_exists(APPPATH . '/views/users/' . $page . '.php')){
             show_404();
         }
-        $data['title'] ='Login Failed';
+        $data['title'] = 'Login Failed';
         $this->load->view('templates/header', $data);
         $this->load->view('users/' . $page, $data);
         $this->load->view('templates/footer', $data);
@@ -123,14 +122,15 @@ class Users extends CI_Controller {
         if(!file_exists(APPPATH . '/views/users/' . $page . '.php')){
             show_404();
         }
-        $data['title'] ='logout';
+        $data['title'] = 'logout';
         $this->load->view('templates/header', $data);
         $this->load->view('users/' . $page, $data);
         $this->load->view('templates/footer', $data);
     }
 
 
-    public function login(){
+    public function login()
+    {
         $data['title'] = 'Sign In';
         $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
@@ -147,11 +147,7 @@ class Users extends CI_Controller {
             $user_id = $this->users_model->login($username, $password);
             if($user_id){
                 // Create session
-                $user_data = array(
-                    'userID' => $user_id,
-                    'username' => $username,
-                    'logged_in' => true
-                );
+                $user_data = array('userID' => $user_id, 'username' => $username, 'logged_in' => true);
                 $this->session->set_userdata($user_data);
                 // Set message
                 //$this->session->set_flashdata('user_loggedin', 'You are now logged in');
@@ -160,6 +156,56 @@ class Users extends CI_Controller {
                 // Set message
                 // $this->session->set_flashdata('login_failed', 'Login is invalid');
                 redirect('users/failed');
+            }
+        }
+    }
+
+    public function profile()
+    {
+        {
+            if(!file_exists(APPPATH . '/views/users/profile.php')){
+                show_404();
+            }
+            $data['title'] = 'My Profile';
+            $data['userID'] = $this->session->userID;
+            if(isset($data['userID'])){
+                $data['userInfo'] = $this->users_model->getAllUserInfo($data['userID']);
+            } else {
+                redirect('users/login');
+            }
+            $this->load->view('templates/header', $data);
+            $this->load->view('users/profile', $data);
+            $this->load->view('templates/footer', $data);
+        }
+    }
+
+    public function image_upload($page = 'image_upload')
+    {
+        if(!file_exists(APPPATH . '/views/users/' . $page . '.php')){
+            show_404();
+        }
+
+        $data['title'] = "UPLOAD IMAGE";
+        $this->load->view('templates/header', $data);
+        $this->load->view('users/image_upload', $data);
+    }
+
+    public function ajax_upload()
+    {
+        echo 'TRIGGERED===============';
+        if(isset($_FILES["image_file"]["name"])){
+            $config['upload_path'] = './uploads/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['max_size'] = 100;
+            $config['max_width'] = 1024;
+            $config['max_height'] = 768;
+
+            $this->upload->initialize($config);
+            if(!$this->upload->do_upload('image_file')){
+                echo $this->upload->display_errors();
+            } else {
+                $data = $this->upload->data();
+                echo '<img src="' . base_url() . '/uploads/' . $data["file_name"] . '" width="300" height="225" class="img-thumbnail" />';
             }
         }
     }

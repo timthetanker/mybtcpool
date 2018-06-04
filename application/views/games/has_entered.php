@@ -1,10 +1,51 @@
-<div class="row">
-    <div class="col-xs-12 col-md-12 text-center">
-        <h3 style="color: red"><?php echo strtoupper('SESSION_SHOULD_GET_1sr_NAME'); ?> You have ALREADY entered your
-            picks for <span class="numberSpan"> <?php echo $tournament ?> </span> Round <span
-                    class="numberSpan"> <?php echo $round ?> </span>
-            <small class="timeSpan"></small>
+<div class="container">
+    <div id="wrapper" style="max-width:1000px; min-width:100px; margin:0px auto">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h3 style="color: red"><?php echo strtoupper('FIRSTNAME HERE'); ?> You have ALREADY entered your
+                    picks for <span style="color: black"> <b> <?php echo $tournament ?> </b></span> Round
+                    <span class="numberSpan" style="color:#000;"> <b><?php echo $round ?></b> </span>
             .
         </h3>
         <small><i>You are only allowed to enter a round once.</i></small>
-        <p style="font-size:1.25em"><i>HERE ARE YOUR SELECTED PICKS</i></p>
+                <h4 style="color: red; text-align: center"><?php echo strtoupper($this->session->username) ?> Here are
+                    your Picks </h4>
+                <style>td {
+                        text-align: left !important
+                    }
+                </style>
+                <table class="table table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            Selected Team
+                        </th>
+                        <th>
+                            Winning Margin
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($recordedPicks as $key => $result) {
+                        ?>
+                        <tr>
+                            <td>
+                                <img src="<?php echo base_url('public/imgs/teams/' . $result->pick); ?>.gif"
+                                     alt="<?php echo $result->pick ?>"/>
+                                <?php echo $result->pick ?>
+                            </td>
+                            <td>
+                                By <span class="numberSpan"> <?php echo $result->points ?> </span> Points
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -36,6 +36,9 @@ $route['users']= 'users';
 $route['users/index'] = 'users/index';
 $route['users/login'] ='users/login';
 $route['users/dashboard'] ='users/dashboard';
+$route['users/profile'] = 'users/profile';
+$route['users/image_upload'] = 'users/image_upload';
+$route['users/ajax_upload'] = 'users/ajax_upload';
 $route['users/failed'] ='users/failed';
 $route['users/logout'] ='users/logout';
 

@@ -50,4 +50,16 @@ class Users_model extends CI_Model {
             return false;
         }
     }
+
+    public function getAllUserInfo($userID)
+    {
+        $sql = "SELECT * from users WHERE userID = '$userID'";
+        $stmnt = $this->db->query($sql);
+        if($stmnt->num_rows() == 1){
+            return $stmnt->result();
+        }
+        return false;
+    }
+
+
 }
