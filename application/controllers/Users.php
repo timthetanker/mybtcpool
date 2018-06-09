@@ -168,45 +168,103 @@ class Users extends CI_Controller {
             }
             $data['title'] = 'My Profile';
             $data['userID'] = $this->session->userID;
-            if(isset($data['userID'])){
+            if(isset($data['userID'])){ //user is logged in from session
+
                 $data['userInfo'] = $this->users_model->getAllUserInfo($data['userID']);
-            } else {
+            } else { //not loged in
                 redirect('users/login');
             }
+            /*if(isset($_POST['submitBtn'])){ #TODO convert to CodeIgniter post menthod for sanitization
+                $data = array('users' => 'users', 'firstname' => $this->input->post('firstname'), 'userID' => $this->session->userID );
+                $this->load->model('users_model'); // load the model first
+                if($this->users_model->upddata($data)) // call the method from the model
+                {
+                    echo 'working';
+                    // update successful
+                }
+                else
+                {
+                    echo 'working';
+                    // update not successful
+                }
+
+
+            }*/
             $this->load->view('templates/header', $data);
             $this->load->view('users/profile', $data);
             $this->load->view('templates/footer', $data);
         }
     }
 
-    public function image_upload($page = 'image_upload')
+    public function update_info()
     {
-        if(!file_exists(APPPATH . '/views/users/' . $page . '.php')){
-            show_404();
+        $userID = $this->session->userID;
+        $data['title'] = 'Updated Info';
+        $data = array('firstname' => $this->input->post('firstname'));
+        $this->load->model('users_model'); // load the model first
+        $result = $this->users_model->update_info($data, $userID);
+        if($result == true)// call the method from the model
+        {
+            redirect(base_url() . 'users/profile');
+            /*
+                        $this->load->view('templates/header', $data);
+                        $this->load->view('users/profile', $data);
+                        $this->load->view('templates/footer', $data);*/
+            // update successful...
+        } else {
+
+            echo '<h1> ERROR </h1>';
+            // update not successful...
         }
 
-        $data['title'] = "UPLOAD IMAGE";
-        $this->load->view('templates/header', $data);
-        $this->load->view('users/image_upload', $data);
     }
 
-    public function ajax_upload()
-    {
-        echo 'TRIGGERED===============';
-        if(isset($_FILES["image_file"]["name"])){
-            $config['upload_path'] = './uploads/';
-            $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = 100;
-            $config['max_width'] = 1024;
-            $config['max_height'] = 768;
-
-            $this->upload->initialize($config);
-            if(!$this->upload->do_upload('image_file')){
-                echo $this->upload->display_errors();
-            } else {
-                $data = $this->upload->data();
-                echo '<img src="' . base_url() . '/uploads/' . $data["file_name"] . '" width="300" height="225" class="img-thumbnail" />';
+#TODO CI SCRIBBLE PAD CLEAN UP
+    /*
+        public function image_upload($page = 'image_upload')
+        {
+            if(!file_exists(APPPATH . '/views/users/' . $page . '.php')){
+                show_404();
             }
+
+            $data['title'] = "UPLOAD IMAGE";
+            $this->load->view('templates/header', $data);
+            $this->load->view('users/image_upload', $data);
+        }
+
+        public function ajax_upload()
+        {
+            echo 'TRIGGERED===============';
+            if(isset($_FILES["image_file"]["name"])){
+                $config['upload_path'] = './uploads/';
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['max_size'] = 100;
+                $config['max_width'] = 1024;
+                $config['max_height'] = 768;
+
+                $this->upload->initialize($config);
+                if(!$this->upload->do_upload('image_file')){
+                    echo $this->upload->display_errors();
+                } else {
+                    $data = $this->upload->data();
+                    echo '<img src="' . base_url() . '/uploads/' . $data["file_name"] . '" width="300" height="225" class="img-thumbnail" />';
+                }
+            }
+        }
+    }*/
+
+
+    public function update_data()
+    {
+        echo $userID = $this->uri->segment(1); //3 can change depending on position bound
+        //load model
+        $this->load->model('users_model');
+        //call main model & store data in $data['user_data']
+        $data['user_data'] = $this->main_model->fetch_single_data($userID);
+        $data['fetch_data'] = $this->main_model->getAllUserInfo($data['userID']); #TODO check
+        if($this->input->post("submitBtn")){
+            $this->main_model->update_data($data, $this->input->post('hidden_id'));
+            redirect(base_url() . 'users/profile');
         }
     }
 }

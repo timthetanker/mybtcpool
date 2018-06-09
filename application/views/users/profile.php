@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 <style>
     .tab-heading {
         color: #337AB7
@@ -114,7 +113,12 @@
 
                     <h1 class="tab-heading">Your Details</h1>
                     <div class="form">
-                        <form name="register" method="post" class="basic">
+                        <?php /**
+                         * example:
+                         * <a href ="<?php echo base_url(); ?>controller/method<?php echo $row->id ?></a>"
+                         * In above example ID is bound as param
+                         **/ ?>
+                        <?php echo form_open('users/update_info'); ?>
                             <input type="hidden" name="submitted" value="true">
                             <input type="hidden" name="task" value="details">
                             <section>
@@ -141,6 +145,9 @@
                                         <label for="user_name">Nickname</label>
                                         <input type="text" id="user_name" name="username" maxlength="22"
                                                value="<?php echo $info->username ?>" class="max">
+                                        <label for="phone">PHONE</label>
+                                        <input type="text" id="phone" name="phone" maxlength="22"
+                                               value="<?php echo $info->phone ?>" class="max">
                                         <div class="info-below-input">The name by which you are known in the game.
                                             Please make it short, clean and simple. Nicknames are unique (i.e. No two
                                             people can have the same username).
@@ -974,28 +981,25 @@
                                 </table>
                                 <input type="hidden" name="totalAllegiances" value="2" id="totalAllegiances"></section>
                             <section>
-                                <h2>Default tournament</h2>
-                                <p>When you log into
-                                    <!--?php echo(Utils::writeBrandName(3)); ?-->, we recommend that you view your <a
-                                            href="/player/dashboard.php">dashboard page</a>. However, if you would
-                                    prefer to go directly into a specific tournament, set your preference here.</p>
-                                <div style="margin-bottom:21px">
-                                    <div class="left marginRightMed">When I log in, go to:</div>
-                                    <div class="left">
-                                        <select id="defaultTournamentId" name="defaultTournamentId">
-                                            <option value="0">My Dashboard</option>
-                                            <option value="571">June Internationals</option>
-                                            <option value="565">World Cup Predictor</option>
-                                        </select>
-                                    </div>
-                                    <div class="clear"></div>
+                                <h1>ENTER ACTIVE TOURNAMENTS HERE</h1><!-- TODO INSERT ACTIVE TOURNAMENTS HERE --> <p>
+                                    When you log into
+                                <div style="width: 100%; color:red; font-size: 18px; background-color: lightgray; height: 100px"
+                                     class="" id="formMsg">
+
                                 </div>
-                            </section>
+                                <div class="form-group">
+                                    <input type="hidden" name="hidden_id" value="<?php echo $info->userID ?>"/>
+                                </div>
                             <?php
                             }
                             ?>
                             <div class="submitHolder"><a href="" class="button">Save changes</a></div>
-                        </form>
+
+                                <button type="submit" class="btn btn-primary" name="submitBtn" id="submitBtn">CHANGE
+                                </button>
+                            </section>
+                        .
+                        <?php echo form_close(); ?>
                     </div>
 
 
@@ -1031,8 +1035,58 @@
         </div><!--./row-->
     </div><!--./Page-->
 </div><!--./container-->
+<script type=text/javascript>
+    /*
+     $(function () {
+     var form = $('#updateUserInfo');
+     var formMessages = $('#formMsg');
 
-<script>
+     // Set up an event listener for the contact form.
+     $(form).submit(function (e) {
+     // Stop the browser from submitting the form.
+     e.preventDefault();
+
+     //do the validation here
+     if (!validateTabReg()) {
+     return;
+     }
+     /*
+     // Serialize the form data.
+     var formData = $(form).serialize();
+
+     // Submit the form using AJAX.
+     $.ajax({
+     type: 'POST',
+     url: $(form).attr('action'),
+     data: formData
+     }).done(function (response) {
+     // Make sure that the formMessages div has the 'success' class.
+     $(formMessages).removeClass('error').addClass('success');
+
+     // Set the message text.
+     $(formMessages).html(response); // < html();
+     /*
+     // Clear the form.
+     $('').val('')
+     }).fail(function (data) {
+     // Make sure that the formMessages div has the 'error' class.
+     $(formMessages).removeClass('success').addClass('error');
+
+     // Set the message text.
+     var messageHtml = data.responseText !== '' ? data.responseText : 'Oops! An error occured and your message could not be sent.';
+     $(formMessages).html(messageHtml); // < html()
+     });
+
+     });
+
+     function validateTabReg() {
+     var valid = true;
+
+
+     return valid;
+     }
+     })*/
+
     $('.tab_content').hide(); //typo here!
     $('.tab').click(function () {
         $('.tab_content').hide();

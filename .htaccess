@@ -2,4 +2,5 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
+#RewriteRule  ^/?ajax/(.*)$	ajax.php?$1 [NC,QSA,L]
 RewriteRule ^ index.php [QSA,L]
