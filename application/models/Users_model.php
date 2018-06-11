@@ -61,10 +61,7 @@ class Users_model extends CI_Model {
         return false;
     }
 
-    public function updateUserInfo($data)
-    {
-        return $this->result();
-    }
+
 
 // #todo CODE IGNITER QUERIES SCRIBBLE PAD BELOW
 

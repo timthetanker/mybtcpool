@@ -160,12 +160,24 @@ class Users extends CI_Controller {
         }
     }
 
+    public function getUserID()
+    {
+        if(isset($this->session)){
+            $data['userID'] = $this->session->userID;
+        }
+        if(!isset($this->session)){
+            redirect(base_url() . 'users/login.php');
+        }
+    }
+
     public function profile()
     {
         {
             if(!file_exists(APPPATH . '/views/users/profile.php')){
                 show_404();
             }
+            $userID = $this->session->userID;
+            var_dump($data['balance'] = $this->games_model->get_balance($userID));
             $data['title'] = 'My Profile';
             $data['userID'] = $this->session->userID;
             if(isset($data['userID'])){ //user is logged in from session
@@ -196,8 +208,13 @@ class Users extends CI_Controller {
         }
     }
 
+#TODO create form validation menthod / function
+
     public function update_info()
     {
+
+        //currently only updates firstname
+        #todo add all required fields to  $data = array('firstname' => $this->input->post('firstname'));
         $userID = $this->session->userID;
         $data['title'] = 'Updated Info';
         $data = array('firstname' => $this->input->post('firstname'));
@@ -213,7 +230,8 @@ class Users extends CI_Controller {
             // update successful...
         } else {
 
-            echo '<h1> ERROR </h1>';
+            echo '<h1> ERROR Updating data </h1>';
+            #TODO set redirect countdown script
             // update not successful...
         }
 

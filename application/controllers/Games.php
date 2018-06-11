@@ -62,10 +62,11 @@ class Games extends CI_Controller {
 
         //ONLY ONE ENTRY ALLOWED PER PLAYER
         //HERE WE CHECK IF PLAYER HAS ENTERED OR NOT
-
+        #TODO update balance when user enters
         $data['userID'] = $this->session->userID;
         $hasEntered = $this->games_model->hasEntered($data['userID'], $data['tournament'], $data['round']);
         if($hasEntered === true){
+
             $getPicks = $this->games_model->getPicks($data['userID'], $data['tournament'], $data['round']);
             $data['recordedPicks'] = $getPicks;
             $this->load->view('templates/header', $data);
@@ -83,9 +84,10 @@ class Games extends CI_Controller {
                     'points' => $this->input->post('score')[$id], //score;
                     'tournament' => $tournament = $this->input->post('tournament')[$id], 'weekNum' => $this->input->post('round')[$id]);
             }
-
-            //Transfering data to Model
-            $this->games_model->record_picks($data['picks']);
+            //Charge for picks #TODO add a check if user has enough funds to enter!!!!!
+            echo $this->games_model->update_balance($this->session->userID);
+            //Transfering data to Model #TODO try catch to confirm picks uploaded
+            echo $this->games_model->record_picks($data['picks']);
 
             $this->load->view('templates/header', $data);
             $this->load->view('games/record_picks', $data);

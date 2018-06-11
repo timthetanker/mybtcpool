@@ -106,11 +106,38 @@ class Games_model extends CI_Model {
                     VALUES ('$userID', '$gameID', '$points', 'rugby', '$tournament',  '$weekNum', '$pickedTeam') ";
             $stmnt = $this->db->query($sql);
 
+
             foreach ($value as $pick) {
                 $pick;
             }
         }
     }
+
+    public function get_balance($userID)
+    {
+        $this->db->select('balance');
+        $this->db->from('users');
+        $this->db->where('userID', $userID);
+        $query = $this->db->get();
+        if($query->num_rows() > 0){
+            return $query->row()->balance;
+        }
+
+        return false;
+    }
+
+    public function update_balance($userID)
+    {
+        $balance = $this->get_balance($userID);
+
+        $newBalance = !empty($balance) ? ($balance - 50) : NULL;
+        var_dump($newBalance);
+        echo '<h1>' . $newBalance . '</h1>';
+
+        $this->db->where("userID", $userID);
+        $this->db->update('users', ['balance' => $newBalance]);
+    }
+
 
     public function has_started($tournament, $round)
     {
