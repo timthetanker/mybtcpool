@@ -96,6 +96,7 @@ class Users extends CI_Controller {
             $this->load->view('users/login', $data);
             $this->load->view('templates/footer');
         } else {
+            $data['balance'] = $this->games_model->get_balance($this->session->userID);
             $data['games'] = $this->games_model->getUpcomingGames();
             $data['title'] = 'WELCOME USER';
             $this->load->view('templates/header', $data);
@@ -146,6 +147,9 @@ class Users extends CI_Controller {
             // Login user
             $user_id = $this->users_model->login($username, $password);
             if($user_id){
+                //test
+
+                //test end
                 // Create session
                 $user_data = array('userID' => $user_id, 'username' => $username, 'logged_in' => true);
                 $this->session->set_userdata($user_data);
@@ -177,7 +181,7 @@ class Users extends CI_Controller {
                 show_404();
             }
             $userID = $this->session->userID;
-            var_dump($data['balance'] = $this->games_model->get_balance($userID));
+            $data['balance'] = $this->games_model->get_balance($userID);
             $data['title'] = 'My Profile';
             $data['userID'] = $this->session->userID;
             if(isset($data['userID'])){ //user is logged in from session

@@ -52,6 +52,9 @@ $route['games/has_entered'] = 'games/has_entered';
 
 
 $route['pages/index'] = 'pages/index';
+$route['pages/contact'] = 'pages/contact';
+$route['pages/contact'] = 'pages/contact';
+$route['pages/user_data_submit'] = 'pages/user_data_submit';
 $route['(:any)'] = 'pages/index/$1';
 $route['default_controller'] = 'pages/index';
 $route['404_override'] = '';

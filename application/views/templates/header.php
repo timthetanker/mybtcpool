@@ -37,14 +37,18 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Pickem APP</a>
+            <a class="navbar-brand" href="#"><?php if(isset($balance)){
+                    echo 'ACC$' . ' ' . $balance;
+                } else {
+                    echo 'Pickem';
+                } ?></a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="/index">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="<?php echo site_url('users/dashboard') ?>">Play</a></li>
             <li><a href="<?php echo site_url('users/image_upload') ?>">Upload</a></li>
-
+            <li><a href="<?php echo site_url('pages/contact') ?>">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <?php
