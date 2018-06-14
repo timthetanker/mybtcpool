@@ -4,6 +4,490 @@
     .tab-heading {
         color: #337AB7
     }
+
+    form .material input[type=text], form .material input[type=password], form .material input[type=email], form .material input[type=number], form .material input[type=search], form .material input[type=tel], form .material input[type=range], form .material input[type=url] {
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: 0;
+        min-height: 40px;
+        border-bottom: 1px solid #95a5a6
+    }
+
+    form .material input[type=text]:focus, form .material input[type=password]:focus, form .material input[type=email]:focus, form .material input[type=number]:focus, form .material input[type=search]:focus, form .material input[type=tel]:focus, form .material input[type=range]:focus, form .material input[type=url]:focus {
+        outline: 0;
+        border-bottom: 1px solid #3498db
+    }
+
+    form .material .group label {
+        color: #7f8c8d;
+        font-size: 18px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: .15s ease all;
+        display: none
+    }
+
+    form .material input[type=text]:focus ~ label, form .material input[type=password]:focus ~ label, form .material input[type=email]:focus ~ label, form .material input[type=number]:focus ~ label, form .material input[type=search]:focus ~ label, form .material input[type=tel]:focus ~ label, form .material input[type=range]:focus ~ label, form .material input[type=url]:focus ~ label {
+        top: -20px;
+        font-size: 14px;
+        color: #2980b9;
+        display: block
+    }
+
+    form .material input[type=text]:valid ~ label, form .material input[type=password]:valid ~ label, form .material input[type=email]:valid ~ label, form .material input[type=number]:valid ~ label, form .material input[type=search]:valid ~ label, form .material input[type=tel]:valid ~ label, form .material input[type=range]:valid ~ label, form .material input[type=url]:valid ~ label {
+        top: -20px;
+        font-size: 14px;
+        color: #7f8c8d;
+        display: block
+    }
+
+    form .material input[type=text]:invalid ~ label, form .material input[type=password]:invalid ~ label, form .material input[type=email]:invalid ~ label, form .material input[type=number]:invalid ~ label, form .material input[type=search]:invalid ~ label, form .material input[type=tel]:invalid ~ label, form .material input[type=range]:invalid ~ label, form .material input[type=url]:invalid ~ label {
+        top: -20px;
+        font-size: 14px;
+        color: #e74c3c;
+        display: block
+    }
+
+    form .material .bar {
+        position: relative;
+        display: block;
+        width: inherit
+    }
+
+    form .material .bar:before, form .material .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #3498db;
+        transition: .2s ease all
+    }
+
+    form .material .bar:before {
+        left: 50%
+    }
+
+    form .material .bar:after {
+        right: 50%
+    }
+
+    form .material input:focus ~ .bar:before, form .material input:focus ~ .bar:after {
+        width: 50%
+    }
+
+    form .material input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px white inset
+    }
+
+    form.basic label {
+        font-size: .9em;
+        margin: 0 0 5px 1px;
+        display: block;
+        text-align: left
+    }
+
+    form.basic label.invalid {
+        color: #e74c3c
+    }
+
+    form.basic label.text-center {
+        text-align: center
+    }
+
+    form.basic .alert {
+        margin-bottom: 20px
+    }
+
+    form.basic .date-dropdown {
+        margin-bottom: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start
+    }
+
+    form.basic .date-dropdown select {
+        width: auto;
+        margin-right: 10px
+    }
+
+    form.basic .date-dropdown select.day {
+        width: 80px
+    }
+
+    form.basic .date-dropdown select.month {
+        width: 100px
+    }
+
+    form.basic .date-dropdown select.year {
+        width: 80px
+    }
+
+    form.basic input[type=submit] {
+        width: 100%
+    }
+
+    @media (min-width: 1024px) {
+        form.basic input[type=submit] {
+            width: auto;
+            margin-left: auto;
+            margin-right: auto
+        }
+    }
+
+    form.basic .group {
+        margin: 0 0 25px 0
+    }
+
+    form.basic .group h4 {
+        margin: 0 0 10px 0
+    }
+
+    form.basic .group:last-child {
+        margin: 0
+    }
+
+    form.basic .group.bottom-margin {
+        margin-bottom: 20px
+    }
+
+    form.basic .group p {
+        margin: 5px 0 10px 0
+    }
+
+    form.basic .group .password-toggle {
+        float: right;
+        color: #3498db;
+        cursor: pointer
+    }
+
+    form.basic .group .radio-group label {
+        cursor: pointer;
+        padding: 5px 0 5px 0
+    }
+
+    form.basic .group .radio-group label:hover {
+        color: #3498db
+    }
+
+    form.basic .group.check-group {
+        margin-left: 10px
+    }
+
+    form.basic .group.check-group.tourn-join-check-group {
+        margin: 15px 0 0 0
+    }
+
+    form.basic .group.check-group label {
+        margin: 0;
+        cursor: pointer
+    }
+
+    form.basic .group.check-group label:hover {
+        color: #3498db
+    }
+
+    form.basic .group.check-group label.center {
+        display: inline-block
+    }
+
+    form.basic .group.check-group label .saving {
+        margin-left: 10px;
+        color: #2980b9;
+        -webkit-animation: save-pulse 1.2s ease-out;
+        -webkit-animation-iteration-count: infinite
+    }
+
+    @-webkit-keyframes actual-live-pulse {
+
+    0
+    {
+        opacity: 1.0
+    }
+
+    50
+    %
+    {
+        opacity: .4
+    }
+
+    100
+    %
+    {
+        opacity: 1.0
+    }
+    }
+
+    form.basic .group.check-group label .saved {
+        margin-left: 10px;
+        color: #27ae60
+    }
+
+    form.basic .group.check-group label .failed {
+        margin-left: 10px;
+        color: #e74c3c
+    }
+
+    form.basic .group.check-group input[type=radio], form.basic .group.check-group input[type=checkbox] {
+        margin-right: 10px
+    }
+
+    form.basic .group.slim-margin {
+        margin-bottom: 10px
+    }
+
+    form.basic .group .info-below-input {
+        font-size: .9em;
+        color: #7f8c8d;
+        margin: 5px 0 0 0;
+        text-align: left
+    }
+
+    form.basic .group .info-below-input.text-center {
+        text-align: center
+    }
+
+    form.basic .group .info-above-input {
+        font-size: .9em;
+        color: #7f8c8d;
+        margin: 0 0 5px 0;
+        text-align: left
+    }
+
+    form.basic .group-couple {
+        margin: 0 0 25px 0
+    }
+
+    @media (min-width: 1024px) {
+        form.basic .group-couple {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center
+        }
+
+        form.basic .group-couple .group {
+            width: 48%;
+            margin: 0
+        }
+    }
+
+    form.basic section, form.basic div.section {
+        border: 1px solid #c3d7d9;
+        margin: 0 0 20px 0;
+        padding: 10px 15px 20px 15px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px
+    }
+
+    form.basic section h2, form.basic div.section h2 {
+        color: #3498db;
+        margin: 0 0 10px 0
+    }
+
+    form.basic section p, form.basic div.section p {
+        margin: 0 0 10px 0;
+        padding: 0;
+        font-size: .95em
+    }
+
+    form.basic input[type=text], form.basic input[type=password], form.basic input[type=email], form.basic input[type=number], form.basic input[type=search], form.basic input[type=file], form.basic input[type=tel], form.basic input[type=range], form.basic input[type=url], form.basic textarea {
+        font-size: 1.1em;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        min-height: 40px;
+        border: 1px solid #c3d7d9;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px
+    }
+
+    form.basic textarea {
+        font-size: 1em;
+        min-height: 100px
+    }
+
+    form.basic .textarea-counter {
+        line-height: 25px;
+        font-size: .9em;
+        width: 100%;
+        text-align: center;
+        color: #7f8c8d
+    }
+
+    form.basic input[type=text]:focus, form.basic input[type=password]:focus, form.basic input[type=email]:focus, form.basic input[type=number]:focus, form.basic input[type=search]:focus, form.basic input[type=tel]:focus, form.basic input[type=range]:focus, form.basic input[type=url]:focus {
+        outline: 0;
+        padding: 9px;
+        border: 2px solid #3498db
+    }
+
+    form.basic input[type=text]:focus:invalid, form.basic input[type=password]:focus:invalid, form.basic input[type=email]:focus:invalid, form.basic input[type=number]:focus:invalid, form.basic input[type=search]:focus:invalid, form.basic input[type=tel]:focus:invalid, form.basic input[type=range]:focus:invalid, form.basic input[type=url]:focus:invalid {
+        border: 2px solid #e74c3c
+    }
+
+    form.basic input[type=text]:focus:valid, form.basic input[type=password]:focus:valid, form.basic input[type=email]:focus:valid, form.basic input[type=number]:focus:valid, form.basic input[type=search]:focus:valid, form.basic input[type=tel]:focus:valid, form.basic input[type=range]:focus:valid, form.basic input[type=url]:focus:valid {
+        border: 2px solid #2ecc71
+    }
+
+    form.basic input[type=checkbox], form.basic input[type=radio] {
+        margin: 0 10px 0 0
+    }
+
+    form.basic select {
+        padding: 10px;
+        font-size: 1.1em;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #c3d7d9;
+        outline: 0;
+        background-image: url("https://superbru-cdn.scdn3.secure.raxcdn.com/coreimages/structure/select_down_with_right_pad2.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 30px 12px
+    }
+
+    form.basic select:focus {
+        padding: 9px;
+        border: 2px solid #3498db
+    }
+
+    form.basic .image-changer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start
+    }
+
+    form.basic .image-changer img {
+        margin: 0 10px 0 0
+    }
+
+    form .radio-panel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between
+    }
+
+    form .radio-panel label {
+        cursor: pointer;
+        background: #fff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        padding: 10px;
+        text-align: center;
+        margin: 0 10px 0 0;
+        border: 1px solid #c3d7d9
+    }
+
+    form .radio-panel label:last-child {
+        margin: 0
+    }
+
+    form .radio-panel label h3 {
+        margin: 10px 0 10px 0
+    }
+
+    form .radio-panel label .sub-info {
+        margin: 10px 0 0 0;
+        font-style: italic
+    }
+
+    form .radio-panel.two-options label {
+        width: 50%
+    }
+
+    input[type=search], form.basic input[type=search] {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        padding: 5px 5px 5px 30px;
+        border: 1px solid #c3d7d9;
+        background-image: url("https://superbru-cdn.scdn3.secure.raxcdn.com/coreimages/structure/search_glass.png");
+        background-repeat: no-repeat;
+        background-position: 7px 7px;
+        line-height: 20px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box
+    }
+
+    .checkbox input {
+        margin-right: 7px
+    }
+
+    .checkbox label {
+        cursor: pointer
+    }
+
+    .checkbox label:hover {
+        color: #3498db
+    }
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px white inset
+    }
+
+    .country-select {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start
+    }
+
+    .country-select .flag-icon {
+        font-size: 2em;
+        margin-right: 10px
+    }
+
+    .country-select .non-select {
+        display: none
+    }
+
+    .country-select.hidden-select .select {
+        display: none
+    }
+
 </style>
 <div class="container">
     <div class="page">
@@ -121,7 +605,9 @@
                          * <a href ="<?php echo base_url(); ?>controller/method<?php echo $row->id ?></a>"
                          * In above example ID is bound as param
                          **/ ?>
-                        <?php echo form_open('users/update_info'); ?>
+                        <?php
+                        $formProperties = array('id' => 'updateUserInfo', 'class' => 'form_main');
+                        echo form_open('users/update_info', $formProperties); ?>
                         <input type="hidden" name="submitted" value="true">
                         <input type="hidden" name="task" value="details">
                         <section>
@@ -135,13 +621,11 @@
                                 </div>
                                 <div class="group">
                                     <label for="lastname">Last name</label>
-                                    <div class="entry">
-                                        <input type="text" id="lastname" name="lastname" maxlength="50"
-                                               value="<?php echo $info->lastname ?>" class="max" required="">
+                                    <input type="text" id="lastname" name="lastname" maxlength="50"
+                                           value="<?php echo $info->lastname ?>" class="max" required="">
                                     </div>
-                                </div>
                                 <div class="group">
-                                    <label for="email">Email address</label>
+                                    <label for="email">Email Addr</label>
                                     <input type="email" id="email" name="email" maxlength="50"
                                            value="<?php echo $info->email ?>" class="max"></div>
                                 <div class="group">

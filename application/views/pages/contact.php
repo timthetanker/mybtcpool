@@ -11,9 +11,7 @@
 
     .main {
         width: 1015px;
-        position: absolute;
-        top: 10%;
-        left: 20%;
+
     }
 
     #form_head {
@@ -27,7 +25,6 @@
     }
 
     #content {
-        position: absolute;
         width: 450px;
         height: 340px;
         border: 2px solid gray;
@@ -35,13 +32,12 @@
     }
 
     #content_result {
-        position: absolute;
+
         width: 450px;
         height: 192px;
         border: 2px solid gray;
         border-radius: 10px;
         margin-left: 559px;
-        margin-top: -262px;
     }
 
     #form_input {
@@ -56,7 +52,6 @@
 
     #form_button {
         padding: 0 21px 15px 15px;
-        position: absolute;
         bottom: 0px;
         width: 414px;
         background-color: #FEFFED;
@@ -88,29 +83,7 @@
         margin-left: 10px;
     }
 
-    #result_id {
-        text-align: center;
-        background-color: #FCD6F4;
-        height: 47px;
-        margin: 0 0 -29px 0;
-        padding-top: 12px;
-        border-radius: 8px 8px 0 0;
-        color: rgb(97, 94, 94);
-    }
 
-    #result_show {
-        margin-top: 35px;
-        margin-left: 45px;
-    }
-
-    .input_box {
-        height: 40px;
-        width: 240px;
-        padding: 20px;
-        border-radius: 3px;
-        background-color: #FEFFED;
-        margin-left: 30px;
-    }
 
     input#date_id {
         margin-left: 10px;
@@ -133,23 +106,20 @@
         margin-left: 40px;
     }
 
-    div#value_pwd {
-        margin-left: 160;
-        margin-top: -20;
-    }
+
 </style>
 
 <script type="text/javascript">
 
     // Ajax post
-    $(document).ready(function () {
+    /*  $(document).ready(function () {
         $(".submit").click(function (event) {
             event.preventDefault();
             var user_name = $("input#name").val();
             var password = $("input#pwd").val();
             jQuery.ajax({
                 type: "POST",
-                url: "<?php echo base_url(); ?>" + "pages/user_data_submit",
+     url: " //echo base_url(); ?>" + "pages/user_data_submit",
                 dataType: 'json',
                 data: {name: user_name, pwd: password},
                 success: function (res) {
@@ -162,7 +132,54 @@
                 }
             });
         });
-    });
+     });*/
+
+    $(function () {
+        var form = $('#updateInfo');
+        var formMessages = $('#formMsg');
+
+        // Set up an event listener for the contact form.
+        $(form).submit(function (e) {
+            // Stop the browser from submitting the form.
+            e.preventDefault();
+
+            //do the validation here
+            if (!validateTabReg()) {
+                return;
+            }
+
+            // Serialize the form data.
+            var formData = $(form).serialize();
+
+            // Submit the form using AJAX.
+            $.ajax({
+                type: 'POST',
+                url: $(form).attr('action'),
+                data: formData
+            }).done(function (response) {
+                // Make sure that the formMessages div has the 'success' class.
+                $(formMessages).removeClass('error').addClass('success');
+
+                // Set the message text.
+                $(formMessages).html(response); // < html();
+
+                // Clear the form.
+                $('').val('')
+            }).fail(function (data) {
+                // Make sure that the formMessages div has the 'error' class.
+                $(formMessages).removeClass('success').addClass('error');
+
+                // Set the message text.
+                var messageHtml = data.responseText !== '' ? data.responseText : 'Oops! An error occured and your message could not be sent.';
+                $(formMessages).html(messageHtml); // < html()
+            });
+
+        });
+        function validateTabReg() {
+            var valid = true;
+            return valid;
+        }
+    })
 </script>
 <div class="main">
     <div id="content">
@@ -170,7 +187,9 @@
         <hr>
         <div id="form_input">
             <?php
-
+            //Set form attributes
+            $attributes = array('id' => 'updateInfo');
+            echo form_open('pages/user_data_submit', $attributes);
             // Form Open
             echo form_open();
 
@@ -194,20 +213,10 @@
         // Form Close
         echo form_close(); ?>
         <?php
-
-        // Display Result Using Ajax
-        echo "<div id='result' style='display: none'>";
-        echo "<div id='content_result'>";
-        echo "<h3 id='result_id'>You have submitted these values</h3><br/><hr>";
-        echo "<div id='result_show'>";
-        echo "<label class='label_output'>Entered Name :<div id='value'> </div></label>";
-        echo "<br>";
-        echo "<br>";
-        echo "<label class='label_output'>Entered Password :<div id='value_pwd'> </div></label>";
-        echo "<div>";
-        echo "</div>";
-        echo "</div>";
         ?>
+        <div id="formMsg">
+            <p>Ajax Values From ID formMsg</p>
+        </div>
     </div>
 </div>
 </body>
