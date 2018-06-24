@@ -19,3 +19,15 @@ $(document).ready(function () {
         });
     });
 });
+
+
+$(function () {
+    $.each($(".user-icon[data-game-id=11]"), function (key, value) {
+        var b = $(".bars[data-game-id=11] .data-point.user-bar").position();
+        if (b != null) {
+            var mid = parseFloat($(".bars[data-game-id=11] .data-point.user-bar").width()) + parseFloat(b.left);
+            mid = mid - parseFloat($(this).width() / 2) - 4;
+            $(this).css("left", mid + "px");
+        }
+    });
+});

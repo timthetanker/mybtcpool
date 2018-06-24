@@ -34,6 +34,18 @@ class Games_model extends CI_Model {
         return false;
     }
 
+    public function get_sport($gameID)
+    {
+        $this->db->select('sport');
+        $this->db->from('schedule');
+        $this->db->where('gameID', $gameID);
+        $query = $this->db->get();
+        if($query->num_rows() > 0){
+            return $query->row()->sport;
+        }
+        return false;
+    }
+
 
     /* public function displayTeamsByGameID($gameID)
      {
@@ -171,6 +183,22 @@ class Games_model extends CI_Model {
         if($stmnt->num_rows() > 0){
             return $stmnt->result();
         }
+        return false;
+    }
+
+    public function get_team_ID($hID)
+    {
+        $sql = "SELECT schedule.homeID, schedule.visitorID, teams.teamName, teams.teamCode 
+                FROM schedule
+                JOIN teams ON teams.teamName = '$hID'";
+        $stmnt = $this->db->query($sql);
+        if($stmnt->num_rows > 0){
+            $teams = array();
+            foreach ($stmnt->result_array() as $team) {
+                $teams = array('teamName' => $team['teamcode']);
+            }
+            return $teams;
+        }//if
         return false;
     }
 }//classs

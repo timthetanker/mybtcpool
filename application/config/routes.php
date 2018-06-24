@@ -46,7 +46,7 @@ $route['users/logout'] ='users/logout';
 
 
 $route['games/make_selections'] = 'games/make_selections';
-$route['games/make_selections/(:any)'] = 'games/soccer_selections';
+$route['games/soccer_selections/(:any)'] = 'games/soccer_selections';
 $route['games/make_selections/(:any)'] = 'games/make_selections'; //any for passing parameter in this case
 $route['games/record_picks'] = 'games/record_picks';
 $route['games/has_entered'] = 'games/has_entered';

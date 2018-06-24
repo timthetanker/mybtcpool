@@ -50,509 +50,231 @@ foreach ($gameID as $game) {
         });
     }
 </script>
-<style type="text/css">
-    .match-card .experts-detail .top {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: space-between;
-        justify-content: space-between
-    }
-
-    .match-card .experts-detail .top .fa-angle-up {
-        font-size: 2em;
-        cursor: pointer;
-        -webkit-transition: all .15s ease;
-        -moz-transition: all .15s ease;
-        -o-transition: all .15s ease;
-        transition: all .15s ease
-    }
-
-    .match-card .experts-detail .top .fa-angle-up:hover {
-        color: #3498db
-    }
-
-    .match-card .card-content {
-        position: relative
-    }
-
-    .match-card .card-content .game-notice {
-        padding: 5px;
-        background: #f3f5f7;
-        color: #34495e;
-        font-size: .9em
-    }
-
-    .match-card .card-content .game-notice .last {
-        color: #7f8c8d;
-        margin-left: 5px;
-        font-size: .9em
-    }
-
-    @media (min-width: 1024px) {
-        .match-card .card-content .game-notice {
-            margin: 10px;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px
-        }
-    }
-
-    .match-card .card-content .card-content-inner {
-        padding: 10px;
-        position: relative;
-        text-align: center
-    }
-
-    @media (min-width: 1024px) {
-        .match-card .card-content .card-content-inner {
-            padding: 15px
-        }
-    }
-
-    .match-card .card-content .card-content-inner .wp-val {
-        font-size: .8em;
-        color: #7f8c8d;
-        margin-bottom: 5px
-    }
-
-    .match-card .card-content .card-content-inner .goal-report {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: space-between;
-        justify-content: space-between
-    }
-
-    .match-card .card-content .card-content-inner .goal-report .goals-scored {
-        min-width: 140px;
-        font-size: .85em;
-        text-align: center
-    }
-
-    .match-card .card-content .card-content-inner .goal-report .goals-scored div {
-        padding: 3px 0 3px 0;
-        text-align: center
-    }
-
-    .match-card .card-content .card-content-inner .goal-report .goals-scored:first-child {
-        padding-left: 20px
-    }
-
-    .match-card .card-content .card-content-inner .goal-report .goals-scored:last-child {
-        padding-right: 20px
-    }
-
-    .match-card .card-content .card-content-inner .team-area {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: space-around;
-        justify-content: space-around;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center
-    }
-
-    .match-card .card-content .card-content-inner .team-area .score {
-        font-size: 2.3em
-    }
-
-    .match-card .card-content .card-content-inner .team-area .score.cricket {
-        font-size: 1.5em
-    }
-
-    .match-card .card-content .card-content-inner .team-area .team {
-        text-align: center
-    }
-
-    .match-card .card-content .card-content-inner .team-area .team .flag-icon {
-        font-size: 3em;
-        margin: 0 0 5px 0
-    }
-
-    @media (min-width: 1094px) {
-        .match-card .card-content .card-content-inner .team-area .team .flag-icon {
-            font-size: 3.8em
-        }
-    }
-
-    .match-card .card-content .card-content-inner .team-area .team img {
-        width: 60px;
-        height: 45px;
-        margin: 0 0 5px 0
-    }
-
-    @media (min-width: 1024px) {
-        .match-card .card-content .card-content-inner .team-area .team img {
-            width: 100px;
-            height: 75px
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .match-card .card-content .card-content-inner .team-area .team img {
-            width: 100px;
-            height: 75px
-        }
-    }
-
-    .match-card .card-content .card-content-inner .team-area .team .name {
-        font-size: .9em;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        text-overflow: ellipsis;
-        height: 32px;
-        width: 73px;
-        margin: 0 auto;
-        vertical-align: middle;
-        line-height: 1.2em
-    }
-
-    .match-card .card-content .card-content-inner .team-area .team .name.sevens {
-        height: auto
-    }
-
-    @media (min-width: 1024px) {
-        .match-card .card-content .card-content-inner .team-area .team .name {
-            width: 100px
-        }
-    }
-
-    .match-card .card-content .cricket-live-score {
-        font-size: 1em;
-        padding: 10px 0 0 0;
-        -webkit-animation: cricket-live-pulse 1s ease-out;
-        -webkit-animation-iteration-count: infinite
-    }
-
-    @-webkit-keyframes cricket-live-pulse {
-
-    0
-    {
-        opacity: 1.0
-    }
-
-    50
-    %
-    {
-        opacity: .75
-    }
-
-    100
-    %
-    {
-        opacity: 1.0
-    }
-    }
-
-    .match-card .card-content .picker-pre-match {
-        align-self: flex-start;
-        -webkit-align-self: flex-start
-    }
-
-    .match-card .card-content .post-status {
-        align-self: flex-start;
-        -webkit-align-self: flex-start;
-        margin: 0 0 18px 0;
-        color: #95a5a6;
-        font-size: .8em;
-        font-style: italic
-    }
-
-    .match-card .card-content .post-status .date {
-        margin: 0
-    }
-
-    .match-card .card-content .post-status.hide-mobile {
-        display: none
-    }
-
-    @media (min-width: 1024px) {
-        .match-card .card-content .post-status.hide-mobile {
-            display: block
-        }
-    }
-
-    .match-card .card-content .soccer-picker-balls .you {
-        font-size: .8em;
-        color: #7f8c8d;
-        padding: 0;
-        text-align: center
-    }
-
-    .match-card .card-content .soccer-picker-balls .inputs {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: space-between;
-        justify-content: space-between
-    }
-
-    .match-card .card-content .soccer-picker-balls .inputs .divider {
-        width: 30px;
-        font-size: 1.2em;
-        color: #7f8c8d
-    }
-
-    .match-card .card-content .soccer-picker-balls .inputs .goals {
-        width: 40px;
-        height: 96px;
-        overflow: hidden;
-        text-align: center;
-        position: relative
-    }
-
-    .match-card .card-content .soccer-picker-balls .inputs .goals .container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        -webkit-transition: all .25s ease;
-        -moz-transition: all .25s ease;
-        -o-transition: all .25s ease;
-        transition: all .25s ease
-    }
-
-    .match-card .card-content .soccer-picker-balls .inputs .goals .container .goal {
-        width: 22px;
-        height: 22px;
-        background: #c3d7d9;
-        color: #0f161c;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        border-radius: 30px;
-        font-size: .9em;
-        font-weight: bold;
-        line-height: 22px;
-        margin: 0 auto;
-        margin-bottom: 2px;
-        cursor: pointer;
-        -webkit-transition: all .25s ease;
-        -moz-transition: all .25s ease;
-        -o-transition: all .25s ease;
-        transition: all .25s ease
-    }
-
-    .match-card .card-content .soccer-picker-balls .inputs .goals .container .goal:hover, .match-card .card-content .soccer-picker-balls .inputs .goals .container .goal.selected {
-        font-size: 1.2em;
-        color: #fff;
-        background: #95a5a6
-    }
-
-    .match-card .card-content .soccer-picker-balls .inputs .goals .container .goal.selected {
-        background: #0f161c;
-        color: #fff
-    }
-
-    .match-card .card-content .soccer-picker-balls .inputs .goals .container .goal.unselected {
-        background: #ecf0f1;
-        color: #95a5a6
-    }
-
-    .match-card .card-content .pick-status {
-        border: 1px solid #fff;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        height: 50px
-    }
-
-    .match-card .card-content .pick-status .date {
-        font-size: .8em;
-        color: #27ae60
-    }
-
-    .match-card .card-content .pick-status a.lock-link {
-        font-size: .8em;
-        padding: 3px 0 0 0;
-        color: #677273;
-        text-decoration: underline
-    }
-
-    .match-card .card-content .pick-status a.lock-link:hover {
-        color: #3498db
-    }
-
-    .match-card .card-content .pick-status .lock-status {
-        margin: 8px 0 2px 0
-    }
-
-    .match-card .card-content .pick-status .lock-status i {
-        font-size: 1.5em;
-        cursor: pointer
-    }
-
-    .match-card .card-content .pick-status .lock-status i.pulse {
-        -webkit-animation: save-pulse 1s ease-out;
-        -webkit-animation-iteration-count: infinite;
-        color: #d35400
-    }
-
-</style>
-
 <div class="container">
-    <div class="row">
-        <!--bro test start-->
-        <div class="col-md-12">
 
-            <div class="card-content">
-                <div class="card-content-inner">
-                    <div class="team-area">
-                        <div class="team">
-                            <span class="flag-icon flag-icon-eg flag-icon-squared"></span>
-                            <div class="name sevens">Egypt</div>
+    <?php echo form_open('games/record_picks'); ?>
+    <?php
+
+    if(!isset($gameID)){
+        DIE("OOOPS, AN ERROR OCCURRED. PLEASE TRY AGAIN IN 2-MINS");
+    }
+    //$games = displayTeamsByGameID($gameID); #TODO VERYIFY FUNCTION TO NEW IMPLEMENTATION
+    foreach ($allGames as $key => $game) {
+        ?>
+        <div class="row">
+            <div class="col-md-8 col-lg-8 col-sm-12">
+                <div class="card-header">
+                    <div class="venue">
+                        <img class="venue-img"
+                             src="https://superbru-cdn.scdn3.secure.raxcdn.com/coreimages/venue/35_1286895450.jpg">
+                        <div class="venue-name">
+                            <?php echo '#TODO add stadiums table' ?>
                         </div>
-                        <div class="picker" id="picker2"
-                             data-bru-token="wymD2Fv8hyC6W5H5fmXzVaw6nTQboJftNwxC28xEpeGe1u7H+Q==">
-                            <div class="soccer-picker" id="soccer-picker2" data-bru-game-id="2" data-bru-existing="3-2"
-                                 data-bru-left-comm="9.48" data-bru-right-comm="72.35">
-                                <div class="goals left" data-bru-game-id="2">
-                                    <input maxlength="2" class="editable-dropdown soccer-left-score" type="text"
-                                           data-bru-colour="000000" data-bru-text-colour="FFFFFF" value="3"
-                                           data-bru-team-name="Egypt" tabindex="3" onclick="">
-                                    <div class="mobile-input" data-bru-colour="000000" data-bru-text-colour="FFFFFF"
-                                         data-bru-team-name="Egypt" data-locked="0">3
-                                    </div>
-                                    <div class="options editable-dropdown" style="display: block;">
-                                        <div class="goal goal0 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,0;)">0
-                                        </div>
-                                        <div class="goal goal1 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,1;)">1
-                                        </div>
-                                        <div class="goal goal2 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,2;)">2
-                                        </div>
-                                        <div class="goal goal3 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,3;)">3
-                                        </div>
-                                        <div class="goal goal4 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,4;)">4
-                                        </div>
-                                        <div class="goal goal5 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,5;)">5
-                                        </div>
-                                        <div class="goal goal6 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,6;)">6
-                                        </div>
-                                        <div class="goal goal7 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,7;)">7
-                                        </div>
-                                        <div class="goal goal8 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,8;)">8
-                                        </div>
-                                        <div class="goal goal9 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,9;)">9
-                                        </div>
-                                        <div class="goal goal10 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,10;)">10
-                                        </div>
-                                        <div class="goal goal11 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,11;)">11
-                                        </div>
-                                        <div class="goal goal12 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;left&quot;,12;)">12
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="v">-</div>
-                                <div class="goals right" data-bru-game-id="2">
-                                    <input maxlength="2" class="editable-dropdown soccer-right-score"
-                                           data-bru-colour="ABCCF4" data-bru-text-colour="000000" type="text" value="2"
-                                           data-bru-team-name="Uruguay" tabindex="4">
-                                    <div class="mobile-input" data-bru-colour="ABCCF4" data-bru-text-colour="000000"
-                                         data-bru-team-name="Uruguay" data-locked="0">2
-                                    </div>
-                                    <div class="options editable-dropdown">
-                                        <div class="goal goal0 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,0;)">0
-                                        </div>
-                                        <div class="goal goal1 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,1;)">1
-                                        </div>
-                                        <div class="goal goal2 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,2;)">2
-                                        </div>
-                                        <div class="goal goal3 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,3;)">3
-                                        </div>
-                                        <div class="goal goal4 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,4;)">4
-                                        </div>
-                                        <div class="goal goal5 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,5;)">5
-                                        </div>
-                                        <div class="goal goal6 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,6;)">6
-                                        </div>
-                                        <div class="goal goal7 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,7;)">7
-                                        </div>
-                                        <div class="goal goal8 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,8;)">8
-                                        </div>
-                                        <div class="goal goal9 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,9;)">9
-                                        </div>
-                                        <div class="goal goal10 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,10;)">10
-                                        </div>
-                                        <div class="goal goal11 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,11;)">11
-                                        </div>
-                                        <div class="goal goal12 "
-                                             onclick="brupicks.soccer.setGoal(2,&quot;right&quot;,12;)">12
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="save-status tall"></div>
-                            <div class="pick-status cricket">
-                                <div class="lock-status unlocked" onclick="brupicks.lockPick(2,565)"><i
-                                            class="lock-icon2 fa fa-unlock-alt" aria-hidden="true"></i></div>
-                                <div class="date">Saved 14 Jun 20:04</div>
-                                <div><a href="javascript:void(0)" onclick="brupicks.lockPick(2,565)" class="lock-link">Lock
-                                        Pick</a></div>
-                            </div>
-                        </div>
-                        <div class="team">
-                            <span class="flag-icon flag-icon-uy flag-icon-squared"></span>
-                            <div class="name sevens">Uruguay</div>
+                        <div class="venue-details">
+                            <?php echo '#TODO add stadiums info' ?>
                         </div>
                     </div>
-                    <div class="goal-report">
-                        <div class="goals-scored"></div>
-                        <div class="goals-scored"></div>
+                    <div class="date hide-desktop">
+                        <?php
+                        $gameDate = strtotime($game->gameTimeEastern);
+                        $gameDateFormat = date('d M H i', $gameDate);
+                        echo $gameDateFormat;
+                        ?>
+                    </div>
+                    <div class="date hide-mobile">
+                        <?php
+                        $gameDate = strtotime($game->gameTimeEastern);
+                        $gameDateFormat = date('D d M H i', $gameDate);
+                        echo $gameDateFormat;
+                        ?>
+                    </div>
+                </div>
+                <?php // STYLE DISPLAY NONE INPUTS
+                ?>
+                <input type="hidden" style="display: none" name="gameID[]" value="<?php echo $game->gameID ?>"/>
+                <input type="hidden" style="display: none" name="tournament[]" value="<?php echo $game->tournament ?>"/>
+                <input type="hidden" style="display: none" name="round[]" value="<?php echo $game->weekNum ?>"/>
+                <input type="hidden" style="display: none" name="event_date[]"
+                       value="<?php echo $game->gameTimeEastern ?>"/>
+                <input type="hidden" style="display: none" name="awayTeam[]" value="<?php echo $game->homeID ?>"/>
+                <input type="hidden" style="display: none" name="homeTeam[]" value="<?php echo $game->visitorID ?>"/>
+
+
+                <?php //*END STYLE DISPLAY NONE INPUTS
+                ?>
+                <div class="match-card">
+                    <div class="content-inner">
+                        <div class="home-team">
+                            <?php $homeTeam = $game->homeID;
+                            ucfirst($homeTeam);
+                            if($game->sport == 'soccer'){
+                                $extension = '.svg';
+                                $img = "<svg height='200px' width='200px' xmlns:" . base_url('public/imgs/svgs/' . $homeTeam) . ".svg</svg>";
+
+                            } else {
+                                $img = "<img src=" . base_url('public/imgs/teams/' . $homeTeam) . ".gif  alt='$homeTeam'/>";
+                            }
+                            ?>
+
+                            <?php echo $img ?>
+                            <br/>
+
+                            <div class="team-name"><?php echo $game->homeID ?></div>
+                        </div>
+                        <div class="selector">
+                            <div id="teams">
+                                <label class="homeTeam">
+                                    <input type="radio" name="picks[<?php echo $key ?>]"
+                                           value="<?php echo $game->homeID ?>">
+                                    <span><?php echo $game->homeID ?></span>
+                                </label>
+                                <br/>
+                                <br/>
+                                <label class="awayTeam">
+                                    <input type="radio" name="picks[<?php echo $key ?>]"
+                                           value="<?php echo $game->visitorID ?>"/>
+                                    <span><?php echo $game->visitorID ?></span>
+                                </label>
+                                <br/>
+                                <br/>
+                                <label class="draw">
+                                    <input type="radio" id="draw" name="picks[<?php echo $key ?>]" value="Draw">
+                                    <span>Draw</span>
+                                </label>
+                                <br/>
+                                <b>BY</b>
+                                <select name="score[<?php echo $key ?>]" style="" class="score-selector">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <b>GOALS</b>
+                            </div>
+                        </div>
+                        <div class="away-team">
+                            <?php $awayTeam = $game->visitorID;
+                            ucfirst($awayTeam);
+                            ?>
+                            <img src="<?php echo base_url('public/imgs/teams/' . $awayTeam); ?>.gif"
+                                 alt="<?php echo $homeTeam ?>"/>
+                            <br/>
+                            <div class="team-name">
+                                <?php echo $game->visitorID ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <div class="col-md-4 col-lg-4 mini-log">
+                <div class="card-header">
+                    <h4>Standings</h4>
+                </div>
+                <div class="match-card">
+                    <table class="data max slim mini-log-scrollable">
+                        <tbody>
+                        <tr>
+                            <th colspan="2"></th>
+                            <th class="text-center" data-tooltip="Won">W</th>
+                            <th class="text-center" data-tooltip="Lost">L</th>
+                            <th class="text-center" data-tooltip="Drawn">D</th>
+                            <th class="text-center" data-tooltip="Points">Pts</th>
+                        </tr>
+                        <tr onclick="bru.ui.openStreak(540,15)">
+                            <td class="text-center">-</td>
+                            <td>
+                                <div class="ellipsis ellipsis100">England</div>
+                            </td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                        </tr>
+                        <tr onclick="bru.ui.openStreak(540,16)">
+                            <td class="text-center">-</td>
+                            <td>
+                                <div class="ellipsis ellipsis100">France</div>
+                            </td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                        </tr>
+                        <tr onclick="bru.ui.openStreak(540,17)">
+                            <td class="text-center">-</td>
+                            <td>
+                                <div class="ellipsis ellipsis100">Ireland</div>
+                            </td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                        </tr>
+                        <tr onclick="bru.ui.openStreak(540,18)">
+                            <td class="text-center">-</td>
+                            <td>
+                                <div class="ellipsis ellipsis100">Italy</div>
+                            </td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                        </tr>
+                        <tr onclick="bru.ui.openStreak(540,19)">
+                            <td class="text-center">-</td>
+                            <td>
+                                <div class="ellipsis ellipsis100">Scotland</div>
+                            </td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                        </tr>
+                        <tr onclick="bru.ui.openStreak(540,20)">
+                            <td class="text-center">-</td>
+                            <td>
+                                <div class="ellipsis ellipsis100">Wales</div>
+                            </td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                            <td class="text-center">0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card-gap">
+        </div>
+        <?php
+    }
+    ?>
+    <style>
+        #dispPicks {
+            font-size: 1.3em;
+            padding: 10px 0px 10px 10px;
+            color: #dd0000;
+        }
 
-        </div>
-        <!--./BRO TEST -->
+        .submitBtn {
 
-        <div class="col-md-6 col-sm-12 hteam">
-            TEAM 1
+        }
+
+    </style>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div id="dispPicks"></div>
+            <button type="submit" class="btn btn-primary submitBtn" name="submitBtn">Submit Picks</button>
         </div>
-        <div class="col-md-6 col-sm-12 ateam">
-            TEAM 2
-        </div>
+        <?php echo form_close(); ?>
     </div>
 </div>

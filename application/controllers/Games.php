@@ -3,19 +3,38 @@
 #TODO change pick format for soccer, cricket etc
 class Games extends CI_Controller {
     /*public $upcoming = array();*/
-    public function make_selections($page = 'make_selections')
+    public function make_selections($page = '')
 {
-   if(!file_exists(APPPATH . '/views/games/'.$page.'.php')){
-        show_404();
-        echo 'ERROR...SENT WE ARE ALREADY WORKING ON IT! PLEASE TRY AGAIN IN 5-MINS';
-    }
+    /* if(!file_exists(APPPATH . '/views/games/'.$page.'.php')){
+          show_404();
+          echo 'ERROR...SENT WE ARE ALREADY WORKING ON IT! PLEASE TRY AGAIN IN 5-MINS';
+      }*/
 
     $data['title'] = 'Make Your Picks';
     $data['gameID'] = $this->games_model->getSelectedGame($this->uri->segment(3));
     $data['allGames'] = $this->games_model->displayTeamsByGameID($this->uri->segment(3));
+    $data['sportType'] = $this->games_model->get_sport($this->uri->segment(3));
+    $sport = $this->games_model->get_sport($this->uri->segment(3));
+
+    //<START> test get svg teams
+
+    foreach ($data['gameID'] as $team) {
+        echo $team->homeID;
+    }
+
+
+    //</END> test
+
     var_dump($data['gameID']);
     $this->load->view('templates/header', $data);
-    $this->load->view('games/'.$page, $data);
+    //link sport to correct view. Example Soccer will have a different view than Cricket
+    if($data['sportType'] == 'soccer'){
+        $page = 'soccer_selections';
+        $this->load->view('games/' . $page, $data);
+    } else {
+        $page = 'make_selections';
+        $this->load->view('games/' . $page, $data);
+    }
     //$this->load->view('templates/upcoming_fixtures_tbl', $data['games']);
     $this->load->view('templates/footer', $data);
     }
@@ -95,4 +114,4 @@ class Games extends CI_Controller {
             $this->load->view('templates/footer', $data);
         }
     }
-}
+}//class

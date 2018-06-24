@@ -15,6 +15,18 @@ class Users_model extends CI_Model {
         return $this->db->insert('users', $data);
     }
 
+
+    // Check username exists
+    public function check_username_exists($username)
+    {
+        $query = $this->db->get_where('users', array('username' => $username));
+        if(empty($query->row_array())){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // Log user in
     public function login($username, $password)
     {
@@ -24,17 +36,6 @@ class Users_model extends CI_Model {
         if($stmnt->num_rows() == 1){
             $user_id = $stmnt->row()->userID;
             return $user_id;
-        } else {
-            return false;
-        }
-    }
-
-    // Check username exists
-    public function check_username_exists($username)
-    {
-        $query = $this->db->get_where('users', array('username' => $username));
-        if(empty($query->row_array())){
-            return true;
         } else {
             return false;
         }
