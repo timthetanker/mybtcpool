@@ -296,8 +296,27 @@ class Users extends CI_Controller {
         }
     }
 
+    public function user_data_submit()
+    {
+        #todo change function, route and form name to update pword
+        #todo form validation
+        #todo write to db if correct
+        $data = array('username' => $this->input->post('currentPassword'), 'pwd' => $this->input->post('pwd'));
+        echo '<pre>';
+        print_r($data);
+        echo '</pre>';
+        foreach ($data as $key => $item) {
+            echo '<i>Username </i>' . $item;
+            echo '<br />';
+            echo '<i>Pwd </i>' . $item;
+            //$this->input->post('pwd');
+            echo '<br />';
+            echo '<hr />';
+        }
+    }
 
     public function displayTournaments()
     {
+
     }
 }//class

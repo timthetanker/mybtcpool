@@ -37,6 +37,7 @@ $route['users/index'] = 'users/index';
 $route['users/login'] ='users/login';
 $route['users/dashboard'] ='users/dashboard';
 $route['users/profile'] = 'users/profile';
+$route['users/user_data_submit'] = 'users/user_data_submit';
 $route['users/update_info'] = 'users/update_info';
 $route['users/update_data'] = 'users/update_data';
 $route['users/image_upload'] = 'users/image_upload';
@@ -53,7 +54,6 @@ $route['games/has_entered'] = 'games/has_entered';
 
 
 $route['pages/index'] = 'pages/index';
-$route['pages/contact'] = 'pages/contact';
 $route['pages/contact'] = 'pages/contact';
 $route['pages/user_data_submit'] = 'pages/user_data_submit';
 $route['(:any)'] = 'pages/index/$1';

@@ -1303,8 +1303,9 @@
                     </script>
                     <div class="form">
                         <?php
-                        $attributes = array('id' => 'updateInfo', 'class' => 'basic');
-                        echo form_open('pages/user_data_submit', $attributes);
+                        #TODO form validation
+                        $attributes = array('id' => 'frmPass', 'class' => 'basic');
+                        echo form_open('users/user_data_submit', $attributes);
                         ?>
                         <input type="hidden" name="submitted" value="true">
                         <input type="hidden" name="task" value="password">
@@ -1313,25 +1314,41 @@
                                 <p>To change your password, enter your current password (so we can be sure it's you
                                     filling in this form) and then type in your new password and confirm it.</p>
                                 <div class="group">
-                                    <label for="currentPassword">Current password</label>
-                                    <input class="max" type="password" id="currentPassword" name="currentPassword"
-                                           maxlength="20" value=""></div>
-                                <div class="group">
-                                    <label for="password1">New password</label>
-                                    <input type="password" id="password1" name="password1" maxlength="20" value=""
-                                           class="max">
+                                    <?php
+                                    echo form_label('Current Password');
+                                    $pword = array('type' => 'password', 'name' => 'currentPassword', 'id' => 'currentPassword', 'class' => 'max', 'maxlength' => '20', 'value' => '');
+                                    ?>
+                                    <!--<label for="currentPassword">Current password</label>-->
+                                    <!--<input class="max" type="password" id="currentPassword" name="currentPassword" maxlength="20" value=""></div>-->
+                                    <?php
+                                    echo form_input($pword);
+                                    ?>
+                                    <div class="clear"></div>
+                                    <br/>
                                     <div class="info-below-input">Your password must be at least 6 characters in length
                                         and is case sensitive.
                                     </div>
-                                </div>
+                                    <div class="clear"></div>
+                                    <br/>
+                                    <div class="group">
+                                        <?php echo form_label('Enter New Password', '', '');
+                                        $pword = array('type' => 'password', 'name' => 'Password1', 'id' => 'Password1', 'class' => 'max', 'maxlength' => '20', 'value' => '');
+                                        echo form_input($pword);
+                                        ?>
+                                    </div><!--./group-->
+                                    <div class="clear"></div>
                                 <div class="group">
-                                    <label for="password2">Confirm new password</label>
-                                    <input type="password" id="password2" name="password2" maxlength="20" value=""
-                                           class="max"></div>
+                                    <?php echo form_label('Confrim New Password');
+                                    $pword = array('type' => 'password', 'name' => 'Password2', 'id' => 'Password2', 'class' => 'max', 'maxlength' => '20', 'value' => '');
+                                    echo form_input($pword);
+                                    ?>
+                                </div><!--./group-->
                                 <div class="clear"></div>
                             </div>
                             <div id="frmPassMsg"></div>
                         </section>
+                        <?php echo form_submit('submit', 'Submit', "class='submit'"); ?>
+
                         <?php echo form_close() ?>
                     </div>
                 </div>
