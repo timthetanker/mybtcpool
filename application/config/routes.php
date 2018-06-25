@@ -40,6 +40,8 @@ $route['users/profile'] = 'users/profile';
 $route['users/user_data_submit'] = 'users/user_data_submit';
 $route['users/update_info'] = 'users/update_info';
 $route['users/update_data'] = 'users/update_data';
+$route['users/userpicks/(:any)'] = 'users/userpicks/$1';
+
 $route['users/image_upload'] = 'users/image_upload';
 $route['users/ajax_upload'] = 'users/ajax_upload';
 $route['users/failed'] ='users/failed';

@@ -1722,7 +1722,7 @@
                                 <li class="item-content">
                                     <div class="item-inner">
                                         <!--PASS TOURNAMENT VARIABLE -->
-                                        <a href="userpicks.php?tour=<?php echo $entered->tournament ?>"><?php echo $entered->tournament ?>
+                                        <a href="userpicks/<?php echo $entered->tournament ?>"><?php echo $entered->tournament ?>
                                             <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                         <?php
                                         ?>

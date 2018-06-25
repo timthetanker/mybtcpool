@@ -315,8 +315,21 @@ class Users extends CI_Controller {
         }
     }
 
-    public function displayTournaments()
+    public function userpicks($page = "")
     {
 
+        /* if(!file_exists(APPPATH . '/views/games/'.$page.'.php')){
+              show_404();
+              echo 'ERROR...SENT WE ARE ALREADY WORKING ON IT! PLEASE TRY AGAIN IN 5-MINS';
+          }*/
+
+        $data['title'] = 'Your Entries';
+        $data['username'] = $this->users_model->getUsername($this->session->userID);
+        $data['tournamentEntries'] = $this->entries->getUserTournamentPicks($this->uri->segment(3), $this->session->userID);
+        $data['tournamentName'] = $this->uri->segment(3);
+        $this->load->view('templates/header', $data);
+        $page = 'userpicks';
+        $this->load->view('users/' . $page, $data);
+        $this->load->view('templates/footer', $data);
     }
 }//class

@@ -62,6 +62,14 @@ class Users_model extends CI_Model {
         return false;
     }
 
+    public function getUsername($userID)
+    {
+        $sql = "SELECT username FROM users WHERE userID = '$userID'";
+        $stmnt = $this->db->query($sql);
+        $username = $stmnt->row()->username;
+        return $username;
+    }
+
 
 
 // #todo CODE IGNITER QUERIES SCRIBBLE PAD BELOW
