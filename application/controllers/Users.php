@@ -331,5 +331,6 @@ class Users extends CI_Controller {
         $page = 'userpicks';
         $this->load->view('users/' . $page, $data);
         $this->load->view('templates/footer', $data);
+
     }
 }//class
