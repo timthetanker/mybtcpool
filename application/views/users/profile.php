@@ -1,494 +1,248 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 
 <style>
-    .tab-heading {
-        color: #337AB7
+    .page h1, .page h2, .page h3 {
+        margin: 0 0 10px 0;
+        font-weight: 300;
+        color: #c0392b
     }
 
-    form .material input[type=text], form .material input[type=password], form .material input[type=email], form .material input[type=number], form .material input[type=search], form .material input[type=tel], form .material input[type=range], form .material input[type=url] {
-        font-size: 18px;
-        padding: 10px 10px 10px 5px;
-        display: block;
-        width: 100%;
-        border: 0;
-        min-height: 40px;
-        border-bottom: 1px solid #95a5a6
+    p {
+        padding: 0 0 10px 0;
+        margin: 0;
+        line-height: 1.4em;
     }
 
-    form .material input[type=text]:focus, form .material input[type=password]:focus, form .material input[type=email]:focus, form .material input[type=number]:focus, form .material input[type=search]:focus, form .material input[type=tel]:focus, form .material input[type=range]:focus, form .material input[type=url]:focus {
-        outline: 0;
-        border-bottom: 1px solid #3498db
+    .list-tournaments {
+        margin: 35px 0;
+        font-size: 17px;
     }
 
-    form .material .group label {
-        color: #7f8c8d;
-        font-size: 18px;
-        font-weight: normal;
-        position: absolute;
-        pointer-events: none;
-        left: 5px;
-        top: 10px;
-        transition: .15s ease all;
-        display: none
+    .list-tournaments ul.no-background {
+        background: transparent;
     }
 
-    form .material input[type=text]:focus ~ label, form .material input[type=password]:focus ~ label, form .material input[type=email]:focus ~ label, form .material input[type=number]:focus ~ label, form .material input[type=search]:focus ~ label, form .material input[type=tel]:focus ~ label, form .material input[type=range]:focus ~ label, form .material input[type=url]:focus ~ label {
-        top: -20px;
-        font-size: 14px;
-        color: #2980b9;
-        display: block
-    }
-
-    form .material input[type=text]:valid ~ label, form .material input[type=password]:valid ~ label, form .material input[type=email]:valid ~ label, form .material input[type=number]:valid ~ label, form .material input[type=search]:valid ~ label, form .material input[type=tel]:valid ~ label, form .material input[type=range]:valid ~ label, form .material input[type=url]:valid ~ label {
-        top: -20px;
-        font-size: 14px;
-        color: #7f8c8d;
-        display: block
-    }
-
-    form .material input[type=text]:invalid ~ label, form .material input[type=password]:invalid ~ label, form .material input[type=email]:invalid ~ label, form .material input[type=number]:invalid ~ label, form .material input[type=search]:invalid ~ label, form .material input[type=tel]:invalid ~ label, form .material input[type=range]:invalid ~ label, form .material input[type=url]:invalid ~ label {
-        top: -20px;
-        font-size: 14px;
-        color: #e74c3c;
-        display: block
-    }
-
-    form .material .bar {
-        position: relative;
-        display: block;
-        width: inherit
-    }
-
-    form .material .bar:before, form .material .bar:after {
+    .list-tournaments ul:before {
         content: '';
-        height: 2px;
-        width: 0;
-        bottom: 1px;
         position: absolute;
-        background: #3498db;
-        transition: .2s ease all
-    }
-
-    form .material .bar:before {
-        left: 50%
-    }
-
-    form .material .bar:after {
-        right: 50%
-    }
-
-    form .material input:focus ~ .bar:before, form .material input:focus ~ .bar:after {
-        width: 50%
-    }
-
-    form .material input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 1000px white inset
-    }
-
-    form.basic label {
-        font-size: .9em;
-        margin: 0 0 5px 1px;
+        left: 0;
+        top: 0;
+        bottom: auto;
+        right: auto;
+        height: 1px;
+        width: 100%;
+        background-color: #acbebf;
         display: block;
-        text-align: left
+        z-index: 15;
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
     }
 
-    form.basic label.invalid {
-        color: #e74c3c
+    .list-tournaments ul {
+        background: #fff;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
     }
 
-    form.basic label.text-center {
-        text-align: center
-    }
-
-    form.basic .alert {
-        margin-bottom: 20px
-    }
-
-    form.basic .date-dropdown {
-        margin-bottom: 10px;
+    .list-tournaments .item-content {
+        box-sizing: border-box;
+        padding-left: 15px;
+        min-height: 44px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
         -webkit-box-align: center;
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
-        -webkit-justify-content: flex-start;
-        justify-content: flex-start
     }
 
-    form.basic .date-dropdown select {
-        width: auto;
-        margin-right: 10px
+    .list-tournaments .item-inner {
+        padding-right: 15px;
+        position: relative;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 7px;
+        min-height: 44px;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        overflow: hidden;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -ms-flex-item-align: stretch;
+        -webkit-align-self: stretch;
+        align-self: stretch;
     }
 
-    form.basic .date-dropdown select.day {
-        width: 80px
+    form {
+        display: block;
+        margin-top: 0em;
     }
-
-    form.basic .date-dropdown select.month {
-        width: 100px
-    }
-
-    form.basic .date-dropdown select.year {
-        width: 80px
-    }
-
-    form.basic input[type=submit] {
-        width: 100%
-    }
-
-    @media (min-width: 1024px) {
-        form.basic input[type=submit] {
-            width: auto;
-            margin-left: auto;
-            margin-right: auto
-        }
-    }
-
-    form.basic .group {
-        margin: 0 0 25px 0
-    }
-
-    form.basic .group h4 {
-        margin: 0 0 10px 0
-    }
-
-    form.basic .group:last-child {
-        margin: 0
-    }
-
-    form.basic .group.bottom-margin {
-        margin-bottom: 20px
-    }
-
-    form.basic .group p {
-        margin: 5px 0 10px 0
-    }
-
-    form.basic .group .password-toggle {
-        float: right;
-        color: #3498db;
-        cursor: pointer
-    }
-
-    form.basic .group .radio-group label {
-        cursor: pointer;
-        padding: 5px 0 5px 0
-    }
-
-    form.basic .group .radio-group label:hover {
-        color: #3498db
-    }
-
-    form.basic .group.check-group {
-        margin-left: 10px
-    }
-
-    form.basic .group.check-group.tourn-join-check-group {
-        margin: 15px 0 0 0
-    }
-
-    form.basic .group.check-group label {
-        margin: 0;
-        cursor: pointer
-    }
-
-    form.basic .group.check-group label:hover {
-        color: #3498db
-    }
-
-    form.basic .group.check-group label.center {
-        display: inline-block
-    }
-
-    form.basic .group.check-group label .saving {
-        margin-left: 10px;
-        color: #2980b9;
-        -webkit-animation: save-pulse 1.2s ease-out;
-        -webkit-animation-iteration-count: infinite
-    }
-
-    @-webkit-keyframes actual-live-pulse {
-
-    0
-    {
-        opacity: 1.0
-    }
-
-    50
-    %
-    {
-        opacity: .4
-    }
-
-    100
-    %
-    {
-        opacity: 1.0
-    }
-    }
-
-    form.basic .group.check-group label .saved {
-        margin-left: 10px;
-        color: #27ae60
-    }
-
-    form.basic .group.check-group label .failed {
-        margin-left: 10px;
-        color: #e74c3c
-    }
-
-    form.basic .group.check-group input[type=radio], form.basic .group.check-group input[type=checkbox] {
-        margin-right: 10px
-    }
-
-    form.basic .group.slim-margin {
-        margin-bottom: 10px
-    }
-
-    form.basic .group .info-below-input {
-        font-size: .9em;
-        color: #7f8c8d;
-        margin: 5px 0 0 0;
-        text-align: left
-    }
-
-    form.basic .group .info-below-input.text-center {
-        text-align: center
-    }
-
-    form.basic .group .info-above-input {
-        font-size: .9em;
-        color: #7f8c8d;
-        margin: 0 0 5px 0;
-        text-align: left
-    }
-
-    form.basic .group-couple {
-        margin: 0 0 25px 0
-    }
-
-    @media (min-width: 1024px) {
-        form.basic .group-couple {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-justify-content: space-between;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center
-        }
-
-        form.basic .group-couple .group {
-            width: 48%;
-            margin: 0
-        }
-    }
-
     form.basic section, form.basic div.section {
         border: 1px solid #c3d7d9;
         margin: 0 0 20px 0;
         padding: 10px 15px 20px 15px;
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
-        border-radius: 2px
+        border-radius: 2px;
     }
 
     form.basic section h2, form.basic div.section h2 {
         color: #3498db;
-        margin: 0 0 10px 0
+        margin: 0 0 10px 0;
     }
 
     form.basic section p, form.basic div.section p {
         margin: 0 0 10px 0;
         padding: 0;
-        font-size: .95em
+        font-size: .95em;
     }
 
-    form.basic input[type=text], form.basic input[type=password], form.basic input[type=email], form.basic input[type=number], form.basic input[type=search], form.basic input[type=file], form.basic input[type=tel], form.basic input[type=range], form.basic input[type=url], form.basic textarea {
-        font-size: 1.1em;
-        padding: 10px;
-        display: block;
-        width: 100%;
-        min-height: 40px;
-        border: 1px solid #c3d7d9;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px
+    body table {
+        font-size: .95em;
     }
 
-    form.basic textarea {
-        font-size: 1em;
-        min-height: 100px
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
     }
 
-    form.basic .textarea-counter {
-        line-height: 25px;
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    table {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: grey;
+    }
+
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+    }
+
+    table.data tr:last-child td, table.data-nav-tray tr:last-child td {
+        border-bottom: 1px solid #c3d7d9;
+    }
+
+    table.data tr:nth-child(even) td, table.data-nav-tray tr:nth-child(even) td {
+        background: #fff;
+    }
+
+    table.data td, table.data-nav-tray td, table.data th, table.data-nav-tray th {
+        padding: 5px;
+    }
+
+    td, th {
+        padding: 0;
+    }
+
+    form.basic label {
         font-size: .9em;
-        width: 100%;
-        text-align: center;
-        color: #7f8c8d
-    }
-
-    form.basic input[type=text]:focus, form.basic input[type=password]:focus, form.basic input[type=email]:focus, form.basic input[type=number]:focus, form.basic input[type=search]:focus, form.basic input[type=tel]:focus, form.basic input[type=range]:focus, form.basic input[type=url]:focus {
-        outline: 0;
-        padding: 9px;
-        border: 2px solid #3498db
-    }
-
-    form.basic input[type=text]:focus:invalid, form.basic input[type=password]:focus:invalid, form.basic input[type=email]:focus:invalid, form.basic input[type=number]:focus:invalid, form.basic input[type=search]:focus:invalid, form.basic input[type=tel]:focus:invalid, form.basic input[type=range]:focus:invalid, form.basic input[type=url]:focus:invalid {
-        border: 2px solid #e74c3c
-    }
-
-    form.basic input[type=text]:focus:valid, form.basic input[type=password]:focus:valid, form.basic input[type=email]:focus:valid, form.basic input[type=number]:focus:valid, form.basic input[type=search]:focus:valid, form.basic input[type=tel]:focus:valid, form.basic input[type=range]:focus:valid, form.basic input[type=url]:focus:valid {
-        border: 2px solid #2ecc71
+        margin: 0 0 5px 1px;
+        display: block;
+        text-align: left;
     }
 
     form.basic input[type=checkbox], form.basic input[type=radio] {
-        margin: 0 10px 0 0
-    }
-
-    form.basic select {
-        padding: 10px;
-        font-size: 1.1em;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 100%;
-        background: #fff;
-        border: 1px solid #c3d7d9;
-        outline: 0;
-        background-image: url("https://superbru-cdn.scdn3.secure.raxcdn.com/coreimages/structure/select_down_with_right_pad2.png");
-        background-position: right center;
-        background-repeat: no-repeat;
-        background-size: 30px 12px
-    }
-
-    form.basic select:focus {
-        padding: 9px;
-        border: 2px solid #3498db
-    }
-
-    form.basic .image-changer {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: flex-start;
-        justify-content: flex-start
-    }
-
-    form.basic .image-changer img {
-        margin: 0 10px 0 0
-    }
-
-    form .radio-panel {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: space-between;
-        justify-content: space-between
-    }
-
-    form .radio-panel label {
-        cursor: pointer;
-        background: #fff;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        padding: 10px;
-        text-align: center;
         margin: 0 10px 0 0;
-        border: 1px solid #c3d7d9
     }
 
-    form .radio-panel label:last-child {
-        margin: 0
+    @media (min-width: 1024px)
+    form.basic input[type=submit] {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    form .radio-panel label h3 {
-        margin: 10px 0 10px 0
+        form.basic input[type=submit] {
+            width: 100%;
+        }
+
+        button, .overlay .footer button, .button, input[type=submit], input[type=button] {
+            background: #c0392b;
+            line-height: 34px;
+            text-align: center;
+            font-size: .95em;
+            padding: 0 15px 0 15px;
+            text-decoration: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            display: inline-block;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            color: #fff;
+            border: 0;
+            -webkit-transition: all .15s ease;
+            -moz-transition: all .15s ease;
+            -o-transition: all .15s ease;
+            transition: all .15s ease;
+        }
+
+        button, .overlay .footer button, html input[type="button"], input[type="reset"], input[type="submit"] {
+            -webkit-appearance: button;
+            cursor: pointer;
+        }
+
+        form.basic .group {
+            margin: 0 0 25px 0;
+        }
+
+        form.basic input[type=text], form.basic input[type=password], form.basic input[type=email], form.basic input[type=number], form.basic input[type=search], form.basic input[type=file], form.basic input[type=tel], form.basic input[type=range], form.basic input[type=url], form.basic textarea {
+            font-size: 1.1em;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            min-height: 40px;
+            border: 1px solid #c3d7d9;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        input {
+            line-height: normal;
+        }
+
+        button, .overlay .footer button, input, optgroup, select, textarea {
+            color: inherit;
+            font: inherit;
+            margin: 0;
+        }
+
+        #frmPassMsg {
+            color: red;
+
     }
 
-    form .radio-panel label .sub-info {
-        margin: 10px 0 0 0;
-        font-style: italic
-    }
-
-    form .radio-panel.two-options label {
-        width: 50%
-    }
-
-    input[type=search], form.basic input[type=search] {
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        padding: 5px 5px 5px 30px;
-        border: 1px solid #c3d7d9;
-        background-image: url("https://superbru-cdn.scdn3.secure.raxcdn.com/coreimages/structure/search_glass.png");
-        background-repeat: no-repeat;
-        background-position: 7px 7px;
-        line-height: 20px;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box
-    }
-
-    .checkbox input {
-        margin-right: 7px
-    }
-
-    .checkbox label {
-        cursor: pointer
-    }
-
-    .checkbox label:hover {
-        color: #3498db
-    }
-
-    input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 1000px white inset
-    }
-
-    .country-select {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: flex-start;
-        justify-content: flex-start
-    }
-
-    .country-select .flag-icon {
-        font-size: 2em;
-        margin-right: 10px
-    }
-
-    .country-select .non-select {
-        display: none
-    }
-
-    .country-select.hidden-select .select {
-        display: none
-    }
 
 </style>
+<?php
+?>
 <div class="container">
     <div class="page">
         <div class="row">
@@ -542,7 +296,7 @@
                         <a href="#" rel="#tab_4_contents" class="tab">
                             <li class="tab-control">
                                 <div class="item-inner">
-                                    <div class="icon-holder"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                                    <div class="icon-holder"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                                     <div class="text no-title">
                                         Email preferences
                                     </div>
@@ -1497,17 +1251,473 @@
                     Option 2 stuff
                 </div>
 
-                <div id="tab_3_contents" class="tab_content">
-                    Option 3 stuff
+                <div id="tab_3_contents" class="tab_content password">
+
+                    <script>
+                        $(function () {
+                            var form = $('#frmPass');
+                            var formMessages = $('#frmPassMsg');
+
+                            // Set up an event listener for the contact form.
+                            $(form).submit(function (e) {
+                                // Stop the browser from submitting the form.
+                                e.preventDefault();
+
+                                //do the validation here
+                                if (!validateTabReg()) {
+                                    return;
+                                }
+
+                                // Serialize the form data.
+                                var formData = $(form).serialize();
+
+                                // Submit the form using AJAX.
+                                $.ajax({
+                                    type: 'POST',
+                                    url: $(form).attr('action'),
+                                    data: formData
+                                }).done(function (response) {
+                                    // Make sure that the formMessages div has the 'success' class.
+                                    $(formMessages).removeClass('error').addClass('success');
+
+                                    // Set the message text.
+                                    $(formMessages).html(response); // < html();
+
+                                    // Clear the form.
+                                    $('').val('')
+                                }).fail(function (data) {
+                                    // Make sure that the formMessages div has the 'error' class.
+                                    $(formMessages).removeClass('success').addClass('error');
+
+                                    // Set the message text.
+                                    var messageHtml = data.responseText !== '' ? data.responseText : 'Oops! An error occured and your message could not be sent.';
+                                    $(formMessages).html(messageHtml); // < html()
+                                });
+
+                            });
+                            function validateTabReg() {
+                                var valid = true;
+                                return valid;
+                            }
+                        })
+                    </script>
+                    <div class="form">
+                        <?php
+                        $attributes = array('id' => 'updateInfo', 'class' => 'basic');
+                        echo form_open('pages/user_data_submit', $attributes);
+                        ?>
+                        <input type="hidden" name="submitted" value="true">
+                        <input type="hidden" name="task" value="password">
+                        <section>
+                            <div class="dataEntry">
+                                <p>To change your password, enter your current password (so we can be sure it's you
+                                    filling in this form) and then type in your new password and confirm it.</p>
+                                <div class="group">
+                                    <label for="currentPassword">Current password</label>
+                                    <input class="max" type="password" id="currentPassword" name="currentPassword"
+                                           maxlength="20" value=""></div>
+                                <div class="group">
+                                    <label for="password1">New password</label>
+                                    <input type="password" id="password1" name="password1" maxlength="20" value=""
+                                           class="max">
+                                    <div class="info-below-input">Your password must be at least 6 characters in length
+                                        and is case sensitive.
+                                    </div>
+                                </div>
+                                <div class="group">
+                                    <label for="password2">Confirm new password</label>
+                                    <input type="password" id="password2" name="password2" maxlength="20" value=""
+                                           class="max"></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div id="frmPassMsg"></div>
+                        </section>
+                        <?php echo form_close() ?>
+                    </div>
                 </div>
 
-                <div id="tab_4_contents" class="tab_content">
-                    Option 4 stuff
-                </div>
+                <div id="tab_4_contents" class="tab_content email">
+                    <!--see https://www.w3schools.com/tags/att_global_data.asp-->
+                    <div class="tab active" data-bru-tab="email" data-bru-cache-secs="1"
+                         data-bru-href="ajax/write_account_email.php" data-bru-data=""
+                         data-bru-last-update="1529932244495">
+                        <form id="epc" name="epc" method="post" class="basic">
+                            <input type="hidden" name="submitted" value="true">
+                            <input type="hidden" name="task" value="emailpref">
+                            <div class="content">
+                                <h2>Email preferences</h2>
+                                <p>Control what kind of emails you receive from Cashbru.</p>
+                                <div class="form">
+                                    <section>
+                                        <h2>Reminders and round wrap-up emails</h2>
+                                        <p>Control your default settings when you sign up for a new tournament.</p>
+                                        <table class="checkHolder">
+                                            <tbody>
+                                            <tr>
+                                                <td class="check">
+                                                    <input type="checkbox" id="accept_reminder" name="accept_reminder"
+                                                           checked="checked" value="1">
+                                                </td>
+                                                <td class="checkTag">
+                                                    <label for="accept_reminder">Receive pick reminder email</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="check">
+                                                    <input type="checkbox" id="accept_second_reminder"
+                                                           name="accept_second_reminder" checked="checked" value="1">
+                                                </td>
+                                                <td class="checkTag">
+                                                    <label for="accept_second_reminder">Receive second pick reminder
+                                                        email if I still haven't made my picks</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="check">
+                                                    <input type="checkbox" id="accept_post_round"
+                                                           name="accept_post_round" checked="checked" value="1">
+                                                </td>
+                                                <td class="checkTag">
+                                                    <label for="accept_post_round">Receive post round wrap-up
+                                                        email</label>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                    <section>
+                                        <h2>Monday morning wrap-up</h2>
+                                        <p>Would you like to receive an email on Mondays showing your performance in all
+                                            your tournaments over the weekend?</p>
+                                        <table class="checkHolder">
+                                            <tbody>
+                                            <tr>
+                                                <td class="check">
+                                                    <input type="checkbox" id="accept_monday" name="accept_monday"
+                                                           checked="checked" value="1">
+                                                </td>
+                                                <td class="checkTag">
+                                                    <label for="accept_monday">Yes, send me a weekend wrap email on
+                                                        Mondays</label>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                    <section>
+                                        <h2>Monthly newsletter</h2>
+                                        <p>Once a month, we produce a newsletter with interesting sporting news and
+                                            highlights from Cashbru. Would you like to receive this?</p>
+                                        <table class="checkHolder">
+                                            <tbody>
+                                            <tr>
+                                                <td class="check">
+                                                    <input type="checkbox" id="accept_newsletter"
+                                                           name="accept_newsletter" checked="checked" value="1">
+                                                </td>
+                                                <td class="checkTag">
+                                                    <label for="accept_newsletter">Yes, send me the monthly
+                                                        newsletter</label>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                    <section>
+                                        <h2>Pool invitation emails</h2>
+                                        <p>Brands and other players can invite you to join their pools. You will receive
+                                            a notification in your dashboard about your invitations, and by default they
+                                            are also emailed to you. Untick the box below if you would prefer not to
+                                            receive the emails.</p>
+                                        <table class="checkHolder">
+                                            <tbody>
+                                            <tr>
+                                                <td class="check">
+                                                    <input type="checkbox" id="accept_invitations"
+                                                           name="accept_invitations" checked="checked" value="1"
+                                                           onchange="inn(this.checked)">
+                                                </td>
+                                                <td class="checkTag">
+                                                    <label for="accept_invitations">Send me invitations from brands and
+                                                        other players by email</label>
+                                                    <div class="clear"></div>
+                                                    <div id="inviteNo"
+                                                         style="display:none;font-size:0.9em;margin:10px 0 0 26px">
+                                                        You'll still get your invitations in your dashboard, but you
+                                                        won't receive email notifications about them.
+                                                        <br>Remember to click 'Save Changes' below to save this setting.
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>
 
-                <div id="tab_5_contents" class="tab_content">
-                    Option 5 stuff
-                </div>
+                                    <section>
+                                        <h2>Pool recreation alerts</h2>
+                                        <p>If you have captained a pool for a specific tournament, we'll email you when
+                                            the next season of that tournament or a comparable tournament starts with
+                                            instructions on how to recreate your pool for the new season. If you'd
+                                            prefer not to receive these emails, disable them here.</p>
+                                        <table class="checkHolder">
+                                            <tbody>
+                                            <tr>
+                                                <td class="check">
+                                                    <input type="checkbox" id="accept_pool_recreation"
+                                                           name="accept_pool_recreation" checked="checked" value="1">
+                                                </td>
+                                                <td class="checkTag">
+                                                    <label for="accept_pool_recreation">Email me instructions for
+                                                        recreating my pools in future tournaments</label>
+                                                    <div class="clear"></div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                    <section>
+                                        <h2>Tournament reminder settings</h2>
+                                        <p>1st reminders are sent 1 - 2 days before the first fixture in a round. 2nd
+                                            reminders are sent 1 - 2 hours before the first game in a round. Post-round
+                                            emails are sent 1 - 2 days after the completion of a round.</p>
+                                        <table class="max data">
+                                            <tbody>
+                                            <tr>
+                                                <th>Rugby Union</th>
+                                                <th class="center">1st Reminder</th>
+                                                <th class="center">2nd Reminder</th>
+                                                <th class="center">Pick Confirmation</th>
+                                            </tr>
+                                            <tr>
+                                                <td>June Internationals</td>
+                                                <td align="center">
+                                                    <input type="checkbox" id="accept_reminder571"
+                                                           name="accept_reminder571" checked="checked" value="1">
+                                                </td>
+                                                <td align="center">
+                                                    <input type="checkbox" id="accept_second_reminder571"
+                                                           name="accept_second_reminder571" checked="checked" value="1">
+                                                </td>
+                                                <td align="center">
+                                                    <input type="checkbox" id="accept_confirmation571"
+                                                           name="accept_confirmation571" checked="checked" value="1">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Soccer</th>
+                                                <th class="center">1st Reminder</th>
+                                                <th class="center">2nd Reminder</th>
+                                                <th class="center">Pick Confirmation</th>
+                                            </tr>
+                                            <tr>
+                                                <td>World Cup Predictor</td>
+                                                <td align="center">
+                                                    <input type="checkbox" id="accept_reminder565"
+                                                           name="accept_reminder565" checked="checked" value="1">
+                                                </td>
+                                                <td align="center">
+                                                    <input type="checkbox" id="accept_second_reminder565"
+                                                           name="accept_second_reminder565" checked="checked" value="1">
+                                                </td>
+                                                <td align="center">
+                                                    <input type="checkbox" id="accept_confirmation565"
+                                                           name="accept_confirmation565" value="1">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <input type="hidden" name="emailPrefTournaments" value="571,565"></section>
+                                </div>
+                                <section>
+                                    <h2>New tournaments</h2>
+                                    <p>Send me an email when a new tournament launches for these sports:</p>
+                                    <table class="checkHolder">
+                                        <tbody>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_american_football"
+                                                       name="accept_american_football" checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_american_football">American Football</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_aussie_rules"
+                                                       name="accept_aussie_rules" checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_aussie_rules">Aussie Rules</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_baseball" name="accept_baseball"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_baseball">Baseball</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_basketball" name="accept_basketball"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_basketball">Basketball</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_cricket" name="accept_cricket"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_cricket">Cricket</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_golf" name="accept_golf"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_golf">Golf</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_motorsport" name="accept_motorsport"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_motorsport">Motorsport</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_rugby_league"
+                                                       name="accept_rugby_league" checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_rugby_league">Rugby League</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_sevens" name="accept_sevens"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_sevens">Rugby Sevens</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_rugby" name="accept_rugby"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_rugby">Rugby Union</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_soccer" name="accept_soccer"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_soccer">Soccer/football</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_tennis" name="accept_tennis"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_tennis">Tennis</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_other_sports"
+                                                       name="accept_other_sports" checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_other_sports">Other sports</label>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                                <section>
+                                    <h2>News and information</h2>
+                                    <p>Send me these kinds of news and information from the world of Cashbru:</p>
+                                    <table class="checkHolder">
+                                        <tbody>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_news" name="accept_news"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_news">General news and information from Cashbru (e.g.
+                                                    prize announcements, new feature announcements)</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="check">
+                                                <input type="checkbox" id="accept_third_party" name="accept_third_party"
+                                                       checked="checked" value="1">
+                                            </td>
+                                            <td class="checkTag">
+                                                <label for="accept_third_party">Information from carefully selected
+                                                    third parties we feel may be of interest to you</label>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </div>
+                            <div class="submitHolder">
+                                <input type="submit" value="Save changes">
+                            </div>
+                        </form>
+                    </div>
+                </div><!--./tab_content email-->
+
+                <div id="tab_5_contents" class="tab_content tournaments">
+
+                    <h2>Your Entered Tournaments</h2>
+                    <p>You have entered the following tournaments<br/>
+                        Click to view picks and results
+                    </p>
+
+
+                    <?php
+                    foreach ($enteredTournaments as $index => $entered) {
+                        ?>
+                        <div class="list-tournaments">
+                            <ul class="no-background">
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <!--PASS TOURNAMENT VARIABLE -->
+                                        <a href="userpicks.php?tour=<?php echo $entered->tournament ?>"><?php echo $entered->tournament ?>
+                                            <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                        <?php
+                                        ?>
+                                    </div><!--./item-inner-->
+                                </li><!--./item-content-->
+                            </ul>
+                        </div><!--/.list tournaments-->
+                        <?php
+                    }
+                    ?>
+
+                </div><!--./Tab 5-->
 
                 <div id="tab_6_contents" class="tab_content">
                     Option 6 stuff

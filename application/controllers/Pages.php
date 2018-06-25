@@ -28,7 +28,7 @@ class Pages extends CI_Controller {
     }
 
     //Ajax
-    // This function call from AJAX
+    // This function call from AJAX for contact
     public function user_data_submit()
     {
         $data = array('username' => $this->input->post('name'), 'pwd' => $this->input->post('pwd'));

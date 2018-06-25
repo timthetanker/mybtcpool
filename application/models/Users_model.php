@@ -98,7 +98,6 @@ class Users_model extends CI_Model {
 
         $this->db->where("userID", $id);
         $query = $this->db->get('users'); //argument table name; query similar to Select * from users where id = '$id'
-        var_dump($query);
         return $query;  //returns output
     }
 
@@ -108,4 +107,13 @@ class Users_model extends CI_Model {
         $this->db->update('users', $data); //second argument pass data you want to update
     }
 
+    public function getEnteredTournaments($id)
+    {
+        $sql = "SELECT tournament from picks WHERE userID = '$id' GROUP BY tournament";
+        $stmnt = $this->db->query($sql);
+        if($stmnt->num_rows() > 0){
+            return $stmnt->result();
+        }
+        return false;
+    }
 }//class

@@ -6,6 +6,22 @@
  * Date: 19/05/2018
  * Time: 06:26
  */
+/*
+ * STACKOVERFLOW EXAMPLE SCRIPT
+ * SELECT s.*,
+       t1.teamId as homeId_teamId,
+       t1.teamCode as homeId_teamCode,
+       t1.teamName as homeId_teamName,
+       t2.teamId as visitorId_teamId,
+       t2.teamCode as visitorId_teamCode,
+       t2.teamName as visitorId_teamName
+FROM Schedule s
+LEFT JOIN Teams t1 ON s.homeId = t1.teamName
+LEFT JOIN Teams t2 ON s.visitorId = t2.teamName;
+ *
+
+ *
+ */
 class Games_model extends CI_Model {
     public function __construct()
     {
@@ -80,10 +96,63 @@ class Games_model extends CI_Model {
      return false;
  }*/
 
+    public function getHomeAwayID($gameID)
+    {
+        $sql = "SELECT s.*,
+       t1.teamId as homeId_teamId,
+       t1.teamCode as homeId_teamCode,
+       t1.teamName as homeId_teamName,
+       t2.teamId as visitorId_teamId,
+       t2.teamCode as visitorId_teamCode,
+       t2.teamName as visitorId_teamName      
+FROM Schedule s
+LEFT JOIN Teams t1 ON s.homeId = t1.teamName
+LEFT JOIN Teams t2 ON s.visitorId = t2.teamName
+WHERE  gameID = '$gameID' ";
+        $stmnt = $this->db->query($sql);
+        if($stmnt->num_rows() > 0){
+            return $stmnt->result();
+        }
+    }
+
+    public function getHomeID($weekNum)
+    {
+        $sql = "SELECT schedule.*, teams.* FROM schedule
+           JOIN teams ON schedule.homeID = teams.teamName
+           WHERE schedule.gameID = '$weekNum'";
+        $stmnt = $this->db->query($sql);
+        if($stmnt->num_rows > 0){
+            $homeID = $stmnt->row()->teamID;
+
+            return $homeID;
+        }
+    }
+
+    public function getAwayID($weekNum)
+    {
+        $sql = "SELECT schedule.*, teams.* FROM schedule
+           JOIN teams ON schedule.visitorID = teams.teamName
+           WHERE schedule.gameID = '$weekNum'";
+        $stmnt = $this->db->query($sql);
+        if($stmnt->num_rows > 0){
+            $awayID = $stmnt->row()->teamID;
+            return $awayID;
+        }
+    }
+
+    public function IDS($weekNum)
+    {
+        $homeID = $this->getHomeID($weekNum);
+        $visitorID = $this->getAwayID($weekNum);
+        $ids[0] = $homeID;
+        $ids[1] = $visitorID;
+        return $ids;
+    }
 
     public function displayTeamsByGameID($gameID)
     {
         #TODO add check to prevent submission where tournament has started
+
         $sql = "SELECT * FROM schedule WHERE gameID = '$gameID'";
         $stmnt = $this->db->query($sql);
         if($stmnt->num_rows() > 0){
@@ -95,7 +164,17 @@ class Games_model extends CI_Model {
         } else {
             return false;
         }
-        $sql = "SELECT * FROM schedule WHERE weekNum = '$weekNum' AND sport = '$sport' AND tournament = '$tournament' ORDER BY gameTimeEastern ASC";
+        $sql = "SELECT s.*,
+       t1.teamId as homeId_teamId,
+       t1.teamCode as homeId_teamCode,
+       t1.teamName as homeId_teamName,
+       t2.teamId as visitorId_teamId,
+       t2.teamCode as visitorId_teamCode,
+       t2.teamName as visitorId_teamName      
+FROM Schedule s
+LEFT JOIN Teams t1 ON s.homeId = t1.teamName
+LEFT JOIN Teams t2 ON s.visitorId = t2.teamName 
+WHERE weekNum = '$weekNum' AND tournament = '$tournament' ORDER BY gameTimeEastern ASC";
         $stmnt = $this->db->query($sql);
         if($stmnt->num_rows() > 0){
             return $stmnt->result();

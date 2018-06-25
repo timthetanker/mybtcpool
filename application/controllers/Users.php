@@ -187,6 +187,12 @@ class Users extends CI_Controller {
             if(isset($data['userID'])){ //user is logged in from session
 
                 $data['userInfo'] = $this->users_model->getAllUserInfo($data['userID']);
+                //Display Users Entered ttournaments on profile page
+                $data['enteredTournaments'] = $this->users_model->getEnteredTournaments($this->session->userID);
+                //user has not entered any tournaments
+                if($data['enteredTournaments'] == FALSE || $data['enteredTournaments'] == NULL){
+                    $data['enteredTournaments'] == 'You have not entered any tournaments';
+                }
             } else { //not loged in
                 redirect('users/login');
             }
@@ -289,4 +295,9 @@ class Users extends CI_Controller {
             redirect(base_url() . 'users/profile');
         }
     }
-}
+
+
+    public function displayTournaments()
+    {
+    }
+}//class

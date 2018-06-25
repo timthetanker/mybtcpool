@@ -15,17 +15,15 @@ class Games extends CI_Controller {
     $data['allGames'] = $this->games_model->displayTeamsByGameID($this->uri->segment(3));
     $data['sportType'] = $this->games_model->get_sport($this->uri->segment(3));
     $sport = $this->games_model->get_sport($this->uri->segment(3));
+    $data['homeAwayID'] = $this->games_model->getHomeAwayID($this->uri->segment(3));
+    //var_dump($data['ids']);
 
     //<START> test get svg teams
-
     foreach ($data['gameID'] as $team) {
         echo $team->homeID;
     }
-
-
     //</END> test
 
-    var_dump($data['gameID']);
     $this->load->view('templates/header', $data);
     //link sport to correct view. Example Soccer will have a different view than Cricket
     if($data['sportType'] == 'soccer'){

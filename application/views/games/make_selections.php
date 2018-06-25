@@ -2,9 +2,10 @@
 
 
 <?php
-foreach($gameID as $game){
+/*foreach($gameID as $game){
     echo $game->gameID;
-}
+}*/
+
 ?>
 <script>
 $(document).ready(function () {
@@ -60,6 +61,7 @@ function updateDiv() {
         }
         //$games = displayTeamsByGameID($gameID); #TODO VERYIFY FUNCTION TO NEW IMPLEMENTATION
         foreach ($allGames as $key => $game) {
+            //var_dump($allGames);
             ?>
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-sm-12">
@@ -111,7 +113,9 @@ function updateDiv() {
                                     $img = "<svg height='200px' width='200px' xmlns:" . base_url('public/imgs/svgs/' . $homeTeam) . ".svg</svg>";
 
                                 } else {
+                                    #TODO match team-logo IMG ID with teams DB table ID $img = "<img src=" . base_url('public/imgs/teams/team-logos/' . $homeTeam) . ".png  alt='$homeTeam'/>";
                                     $img = "<img src=" . base_url('public/imgs/teams/' . $homeTeam) . ".gif  alt='$homeTeam'/>";
+
                                 }
                                 ?>
 
