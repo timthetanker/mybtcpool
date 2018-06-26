@@ -323,9 +323,9 @@ class Users extends CI_Controller {
               echo 'ERROR...SENT WE ARE ALREADY WORKING ON IT! PLEASE TRY AGAIN IN 5-MINS';
           }*/
 
-        $data['title'] = 'Your Entries';
+        $data['title'] = 'Your PicksModel';
         $data['username'] = $this->users_model->getUsername($this->session->userID);
-        $data['tournamentEntries'] = $this->entries->getUserTournamentPicks($this->uri->segment(3), $this->session->userID);
+        $data['tournamentEntries'] = $this->picks_model->getUserTournamentPicks($this->uri->segment(3), $this->session->userID);
         $data['tournamentName'] = $this->uri->segment(3);
         $this->load->view('templates/header', $data);
         $page = 'userpicks';

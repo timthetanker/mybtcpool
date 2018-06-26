@@ -10,7 +10,7 @@ class Games extends CI_Controller {
           echo 'ERROR...SENT WE ARE ALREADY WORKING ON IT! PLEASE TRY AGAIN IN 5-MINS';
       }*/
 
-    $data['title'] = 'Make Your Picks';
+    $data['title'] = 'Make Your PicksModel';
     $data['gameID'] = $this->games_model->getSelectedGame($this->uri->segment(3));
     $data['allGames'] = $this->games_model->displayTeamsByGameID($this->uri->segment(3));
     $data['sportType'] = $this->games_model->get_sport($this->uri->segment(3));
@@ -44,7 +44,7 @@ class Games extends CI_Controller {
             show_404();
             echo 'ERROR...SENT WE ARE ALREADY WORKING ON IT! PLEASE TRY AGAIN IN 5-MINS';
         }
-        $data['title'] = 'Saving Picks';
+        $data['title'] = 'Saving PicksModel';
         $data['tournament'] = $tournament = $this->input->post('tournament')[0];
         $data['round'] = $round = $this->input->post('round')[0];
         //Ensure tournament and round is set
@@ -94,17 +94,17 @@ class Games extends CI_Controller {
         if($hasEntered === false){
             //USER NOT ENTERED
             //UPLOAD RESULTS
-            $data['picks'] = array();
+            $data['PicksModel'] = array();
             //GETTING SELECTIONS ADDING TO ARRAY
-            foreach ($this->input->post('picks') as $id => $winner) {
-                $data['picks'][$id] = array('pick' => $teamsel[] = $winner, 'gameID' => $this->input->post('gameID')[$id], //match Id
+            foreach ($this->input->post('PicksModel') as $id => $winner) {
+                $data['PicksModel'][$id] = array('pick' => $teamsel[] = $winner, 'gameID' => $this->input->post('gameID')[$id], //match Id
                     'points' => $this->input->post('score')[$id], //score;
                     'tournament' => $tournament = $this->input->post('tournament')[$id], 'weekNum' => $this->input->post('round')[$id]);
             }
             //Charge for picks #TODO add a check if user has enough funds to enter!!!!!
             echo $this->games_model->update_balance($this->session->userID);
             //Transfering data to Model #TODO try catch to confirm picks uploaded
-            echo $this->games_model->record_picks($data['picks']);
+            echo $this->games_model->record_picks($data['PicksModel']);
 
             $this->load->view('templates/header', $data);
             $this->load->view('games/record_picks', $data);
