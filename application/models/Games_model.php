@@ -62,42 +62,10 @@ class Games_model extends CI_Model {
         return false;
     }
 
-
-    /* public function displayTeamsByGameID($gameID)
-     {
-         #TODO add check to prevent submission where tournament has started
-         /*$sql = "SELECT schedule.*, teams.* FROM schedule
-               JOIN teams ON schedule.homeID = teams.teamCode OR schedule.visitorID = teams.teamCode
-               WHERE schedule.gameID = '$gameID'";*/
-    /* $sql ="select * from schedule s
-      INNER join teams t1 on s.homeID = t1.teamCode
-      INNER JOIN teams t2 on s.visitorID = t2.teamCode
-      WHERE "
-
-     $stmnt = $this->db->query($sql);
-
-     if($stmnt->num_rows() > 0){
-         foreach ($stmnt->result_array() as $row) {
-             $weekNum = $row['weekNum'];
-             $sport = $row['sport'];
-             $tournament = $row['tournament'];
-         }
-     } else {
-         return false;
-     }
-     $sql = "SELECT schedule.*, teams.* FROM schedule
-           JOIN teams ON schedule.homeID = teams.teamCode OR schedule.visitorID = teams.teamCode
-           WHERE schedule.weekNum = '$weekNum' AND tournament = '$tournament' ORDER BY gameTimeEastern ASC";
-     //$sql = "SELECT * FROM schedule WHERE weekNum = '$weekNum' AND sport = '$sport' AND tournament = '$tournament' ORDER BY gameTimeEastern ASC";
-     $stmnt = $this->db->query($sql);
-     if($stmnt->num_rows() > 0){
-         return $stmnt->result();
-     }//if
-     return false;
- }*/
-
     public function getHomeAwayID($gameID)
     {
+        #TODO add check to prevent submission where tournament has started
+
         $sql = "SELECT s.*,
        t1.teamId as homeId_teamId,
        t1.teamCode as homeId_teamCode,
@@ -115,39 +83,7 @@ WHERE  gameID = '$gameID' ";
         }
     }
 
-    public function getHomeID($weekNum)
-    {
-        $sql = "SELECT schedule.*, teams.* FROM schedule
-           JOIN teams ON schedule.homeID = teams.teamName
-           WHERE schedule.gameID = '$weekNum'";
-        $stmnt = $this->db->query($sql);
-        if($stmnt->num_rows > 0){
-            $homeID = $stmnt->row()->teamID;
 
-            return $homeID;
-        }
-    }
-
-    public function getAwayID($weekNum)
-    {
-        $sql = "SELECT schedule.*, teams.* FROM schedule
-           JOIN teams ON schedule.visitorID = teams.teamName
-           WHERE schedule.gameID = '$weekNum'";
-        $stmnt = $this->db->query($sql);
-        if($stmnt->num_rows > 0){
-            $awayID = $stmnt->row()->teamID;
-            return $awayID;
-        }
-    }
-
-    public function IDS($weekNum)
-    {
-        $homeID = $this->getHomeID($weekNum);
-        $visitorID = $this->getAwayID($weekNum);
-        $ids[0] = $homeID;
-        $ids[1] = $visitorID;
-        return $ids;
-    }
 
     public function displayTeamsByGameID($gameID)
     {
@@ -172,8 +108,8 @@ WHERE  gameID = '$gameID' ";
        t2.teamCode as visitorId_teamCode,
        t2.teamName as visitorId_teamName      
 FROM Schedule s
-LEFT JOIN Teams t1 ON s.homeId = t1.teamName
-LEFT JOIN Teams t2 ON s.visitorId = t2.teamName 
+LEFT JOIN Teams t1 ON s.homeId = t1.teamID
+LEFT JOIN Teams t2 ON s.visitorId = t2.teamID 
 WHERE weekNum = '$weekNum' AND tournament = '$tournament' ORDER BY gameTimeEastern ASC";
         $stmnt = $this->db->query($sql);
         if($stmnt->num_rows() > 0){
@@ -204,19 +140,6 @@ WHERE weekNum = '$weekNum' AND tournament = '$tournament' ORDER BY gameTimeEaste
         }
     }
 
-    public function get_balance($userID)
-    {
-        $this->db->select('balance');
-        $this->db->from('users');
-        $this->db->where('userID', $userID);
-        $query = $this->db->get();
-        if($query->num_rows() > 0){
-            return $query->row()->balance;
-        }
-
-        return false;
-    }
-
     public function update_balance($userID)
     {
         $balance = $this->get_balance($userID);
@@ -229,6 +152,18 @@ WHERE weekNum = '$weekNum' AND tournament = '$tournament' ORDER BY gameTimeEaste
         $this->db->update('users', ['balance' => $newBalance]);
     }
 
+    public function get_balance($userID)
+    {
+        $this->db->select('balance');
+        $this->db->from('users');
+        $this->db->where('userID', $userID);
+        $query = $this->db->get();
+        if($query->num_rows() > 0){
+            return $query->row()->balance;
+        }
+
+        return false;
+    }
 
     public function has_started($tournament, $round)
     {
