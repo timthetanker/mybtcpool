@@ -92,19 +92,17 @@ class Games extends CI_Controller {
             $this->load->view('templates/footer', $data);
         }
         if($hasEntered === false){
-            //USER NOT ENTERED
-            //UPLOAD RESULTS
-            $data['PicksModel'] = array();
-            //GETTING SELECTIONS ADDING TO ARRAY
-            foreach ($this->input->post('PicksModel') as $id => $winner) {
-                $data['PicksModel'][$id] = array('pick' => $teamsel[] = $winner, 'gameID' => $this->input->post('gameID')[$id], //match Id
+            foreach ($this->input->post('gameID') as $id => $game) {
+
+                //GETTING SELECTIONS ADDING TO ARRAY
+                $data['picks'][$id] = array('pick' => $this->input->post('picks')[$id], 'gameID' => $this->input->post('gameID')[$id], //match Id
                     'points' => $this->input->post('score')[$id], //score;
                     'tournament' => $tournament = $this->input->post('tournament')[$id], 'weekNum' => $this->input->post('round')[$id]);
             }
             //Charge for picks #TODO add a check if user has enough funds to enter!!!!!
             echo $this->games_model->update_balance($this->session->userID);
             //Transfering data to Model #TODO try catch to confirm picks uploaded
-            echo $this->games_model->record_picks($data['PicksModel']);
+            echo $this->games_model->record_picks($data['picks']);
 
             $this->load->view('templates/header', $data);
             $this->load->view('games/record_picks', $data);

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/application/models/db_backups/pickem_db.24_june.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/application/models/pickem_db_backup.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/application/models/db_backups/pickem_db_backup.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/dbBackups/pickem_db 6 july.sql" dialect="MySQL" />
   </component>
 </project>
