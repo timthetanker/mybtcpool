@@ -1,5 +1,6 @@
 <?php
 echo $title;
+var_dump($picks);
 ?>
 
 <style type="text/css">
@@ -63,9 +64,10 @@ echo $title;
                                 ?>
                                 <tr>
                                     <td>
-                                        <img src="<?php echo base_url('public/imgs/teams/' . $result['pick']); ?>.gif"
+                                        <!-- <img src=" . base_url('public/imgs/team-logos/' . $homeTeam) . ".png  alt='$homeTeamName'/>";-->
+                                        <img src="<?php echo base_url('public/imgs/team-logos/' . $result['pick']); ?>.png"
                                              alt="<?php echo $result['pick'] ?>"/>
-                                        <?php echo $result['pick'] ?>
+                                        <?php echo $result['winner'] ?>
                                     </td>
                                     <td>
                                         By <span class="numberSpan"> <?php echo $result['points'] ?> </span> Points

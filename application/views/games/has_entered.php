@@ -1,5 +1,6 @@
 <div class="container">
     <div id="wrapper" style="max-width:1000px; min-width:100px; margin:0px auto">
+        <?php var_dump($recordedPicks); ?>
         <div class="row">
             <div class="col-md-12 col-xs-12">
                 <h3 style="color: red"><?php echo strtoupper('FIRSTNAME HERE'); ?> You have ALREADY entered your
@@ -31,9 +32,9 @@
                         ?>
                         <tr>
                             <td>
-                                <img src="<?php echo base_url('public/imgs/teams/' . $result->pick); ?>.gif"
-                                     alt="<?php echo $result->pick ?>"/>
-                                <?php echo $result->pick ?>
+                                <img src="<?php echo base_url('public/imgs/team-logos/' . $result->pick); ?>.png"
+                                     alt="<?php echo $result->picked_teamName ?>"/>
+                                <?php echo $result->picked_teamName ?>
                             </td>
                             <td>
                                 By <span class="numberSpan"> <?php echo $result->points ?> </span> Points

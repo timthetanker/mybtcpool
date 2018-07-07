@@ -6,7 +6,9 @@
     echo $game->gameID;
 }*/
 
+var_dump($allGames);
 ?>
+
 <script>
 $(document).ready(function () {
 
@@ -99,6 +101,10 @@ function updateDiv() {
                     <input type="hidden" style="display: none" name="event_date[]" value="<?php echo $game->gameTimeEastern ?>"/>
                     <input type="hidden" style="display: none" name="awayTeam[]" value="<?php echo $game->homeID ?>"/>
                     <input type="hidden" style="display: none" name="homeTeam[]" value="<?php echo $game->visitorID ?>"/>
+                    <input type="hidden" style="display: none" name="awayTeamName[]"
+                           value="<?php echo $game->visitorId_teamName ?>"/>
+                    <input type="hidden" style="display: none" name="homeTeamName[]"
+                           value="<?php echo $game->homeId_teamName ?>"/>
 
 
                     <?php //*END STYLE DISPLAY NONE INPUTS
@@ -107,14 +113,15 @@ function updateDiv() {
                         <div class="content-inner">
                             <div class="home-team">
                                 <?php $homeTeam = $game->homeID;
-                                ucfirst($homeTeam);
+                                $homeTeamName = $game->homeId_teamName;
+                                ucfirst($homeTeamName);
                                 if($game->sport == 'soccer'){
                                     $extension = '.svg';
                                     $img = "<svg height='200px' width='200px' xmlns:" . base_url('public/imgs/svgs/' . $homeTeam) . ".svg</svg>";
 
                                 } else {
                                     #TODO match team-logo IMG ID with teams DB table ID $img = "<img src=" . base_url('public/imgs/teams/team-logos/' . $homeTeam) . ".png  alt='$homeTeam'/>";
-                                    $img = "<img src=" . base_url('public/imgs/teams/' . $homeTeam) . ".gif  alt='$homeTeam'/>";
+                                    $img = "<img src=" . base_url('public/imgs/team-logos/' . $homeTeam) . ".png  alt='$homeTeamName'/>";
 
                                 }
                                 ?>
@@ -122,21 +129,21 @@ function updateDiv() {
                                 <?php echo $img ?>
                                 <br/>
 
-                                <div class="team-name"><?php echo $game->homeID ?></div>
+                                <div class="team-name"><?php echo $game->homeId_teamName ?></div>
                             </div>
                             <div class="selector">
                                 <div id="teams">
                                     <label class="homeTeam">
                                         <input type="radio" name="picks[<?php echo $key ?>]"
                                                value="<?php echo $game->homeID ?>">
-                                        <span><?php echo $game->homeID ?></span>
+                                        <span><?php echo $game->homeId_teamName ?></span>
                                     </label>
                                     <br/>
                                     <br/>
                                     <label class="awayTeam">
                                         <input type="radio" name="picks[<?php echo $key ?>]"
                                                value="<?php echo $game->visitorID ?>"/>
-                                        <span><?php echo $game->visitorID ?></span>
+                                        <span><?php echo $game->visitorId_teamName ?></span>
                                     </label>
                                     <br/>
                                     <br/>
@@ -204,12 +211,14 @@ function updateDiv() {
                             </div>
                             <div class="away-team">
                                    <?php $awayTeam = $game->visitorID;
-                                ucfirst($awayTeam);
+                                   $awayTeamName = $game->visitorId_teamName;
+                                   ucfirst($awayTeamName);
                                 ?>
-                                <img src="<?php echo base_url('public/imgs/teams/'.$awayTeam); ?>.gif" alt="<?php echo $homeTeam ?>"/>
+                                <img src="<?php echo base_url('public/imgs/team-logos/' . $awayTeam); ?>.png"
+                                     alt="<?php echo $game->visitorId_teamName ?>"/>
                                 <br/>
                                 <div class="team-name">
-                                    <?php echo $game->visitorID ?>
+                                    <?php echo $game->visitorId_teamName ?>
                                 </div>
                             </div>
                         </div>
