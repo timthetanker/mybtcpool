@@ -188,11 +188,31 @@ WHERE weekNum = '$weekNum' AND tournament = '$tournament' ORDER BY gameTimeEaste
         return false;
     }
 
+    /*
+     * SELECT s.*,
+       t1.teamId as homeId_teamId,
+       t1.teamCode as homeId_teamCode,
+       t1.teamName as homeId_teamName,
+       t2.teamId as visitorId_teamId,
+       t2.teamCode as visitorId_teamCode,
+       t2.teamName as visitorId_teamName
+FROM Schedule s
+LEFT JOIN Teams t1 ON s.homeId = t1.teamID
+LEFT JOIN Teams t2 ON s.visitorId = t2.teamID
+WHERE weekNum = '$weekNum' AND tournament = '$tournament' ORDER BY gameTimeEastern ASC
+     */
+
     //get picks for specific tournament
     public function getPicks($userID, $tournament, $weekNum)
     {
-        $sql = "select * FROM picks
-			WHERE userID = '$userID' AND tournament = '$tournament' AND weekNum = '$weekNum'";
+        $sql = "select p.*,  
+                t.teamId as picked_teamId,
+                t.teamName as picked_teamName
+                FROM picks p 
+                JOIN teams t ON p.pick = t.teamId
+			    WHERE userID = '$userID' AND tournament = '$tournament' AND weekNum = '$weekNum'
+			    ORDER BY gameID ASC ";
+
         $stmnt = $this->db->query($sql);
         if($stmnt->num_rows() > 0){
             return $stmnt->result();
