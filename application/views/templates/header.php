@@ -24,8 +24,7 @@
     </style>
     <?php
     echo link_tag('public/css/style.css');
-    echo link_tag('public/css/sports.css');
-    #TODO fix navbar ahref possible solution link_tag
+    //  echo link_tag('public/css/sports.css');
     ?>
 </head>
 <body>
@@ -50,6 +49,8 @@
                 <li><a href="<?php echo site_url('users/dashboard') ?>">Play</a></li>
                 <li><a href="<?php echo site_url('users/image_upload') ?>">Upload</a></li>
                 <li><a href="<?php echo site_url('pages/contact') ?>">Contact</a></li>
+                <li><a href="<?php echo site_url('admin/index') ?>">ADMIN</a></li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php

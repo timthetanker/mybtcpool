@@ -31,6 +31,8 @@ Note : tutorial is controller and java is controller’s function.
 
 Note : Do not use leading/trailing slashes.
  */
+$route['admin/login'] = 'admin/login';
+$route['admin/(:any)'] = 'admin/$1';
 
 $route['users']= 'users';
 $route['users/index'] = 'users/index';

@@ -227,7 +227,7 @@ class Users extends CI_Controller {
         #todo add all required fields to  $data = array('firstname' => $this->input->post('firstname'));
         $userID = $this->session->userID;
         $data['title'] = 'Updated Info';
-        $data = array('firstname' => $this->input->post('firstname'));
+        $data['firstname'] = array('firstname' => $this->input->post('firstname'));
         $this->load->model('users_model'); // load the model first
         $result = $this->users_model->update_info($data, $userID);
         if($result == true)// call the method from the model
@@ -332,5 +332,17 @@ class Users extends CI_Controller {
         $this->load->view('users/' . $page, $data);
         $this->load->view('templates/footer', $data);
 
+    }
+
+    public function admin()
+    {
+        //check if Admin
+        $data['isAdmin'] = $this->admin_model->isAdmin($this->session->userID);
+        var_dump($data['isAdmin']);
+        $page = 'dashboard';
+        $data['title'] = $page;
+        $this->load->view('templates/header', $data);
+        $this->load->view('pages/' . $page, $data);
+        $this->load->view('templates/footer', $data);
     }
 }//class

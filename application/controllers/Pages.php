@@ -43,8 +43,16 @@ class Pages extends CI_Controller {
             echo '<br />';
             echo '<hr />';
         }
-
-//Either you can print value or you can send value to database
+        //Either you can print value or you can send value to database
         //echo json_encode($data);
+    }
+
+    public function adminIndex($page = 'index')
+    {
+
+        $data['title'] = $page;
+        $this->load->view('templates/header', $data);
+        $this->load->view('admin/login');
+        $this->load->view('templates/footer', $data);
     }
 }
