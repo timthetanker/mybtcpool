@@ -355,22 +355,24 @@ class Admin_model extends CI_Model
 
     public function verifyUser()
     {
+        $error1 = 'Not Authorized TO view Page';
+        $error2 = 'Sessions Not Set';
         #todo check that user is admin
-        if (isset($this->session->userID)) { //check if session is activated
-            $sql = "SELECT * FROM admin WHERE id = " . $this->db->escape(strip_tags((int)$this->session->userdata("admin_id"))) . " AND verification_key = " . $this->db->escape(strip_tags($this->session->userdata("verification_key"))) . " AND username = " . $this->db->escape(strip_tags($this->session->userdata("username")));
-            $query = $this->db->query($sql);
-            if ($query->num_rows() > 0) {
-                return TRUE;
-            } else {
-                $this->logout();
-                redirect(base_url() . "admin/login", 'auto');
-            }
-        } else {
-            $this->logout();
-            redirect(base_url() . "admin/login", 'auto');
-        }
-    }
+        if (isset($this->session->userdata)) { //check if session is activated
+            //get username and ID
+            $sql = "SELECT * FROM admin WHERE id = " . $this->db->escape(strip_tags((int)$this->session->userdata("admin_id"))) . " AND username = " . $this->db->escape(strip_tags($this->session->userdata("username")));
+            $stmnt = $this->db->query($sql);
+            if ($stmnt->num_rows() >= 1) {
+                return true;
 
+            } else {
+                //user not found or authorized to access page
+                return $error1;
+            }
+        }
+        //Sessions Not Set
+        return $error2;
+    }
 
     public function logout()
     {
