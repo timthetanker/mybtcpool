@@ -1,3 +1,9 @@
+<style>
+    body, html {
+        background-color: white;
+        color: black;
+    }
+</style>
 <?php
 /**
  * Created by PhpStorm.
@@ -6,4 +12,4 @@
  * Time: 11:21 PM
  */
 ?>
-<h1>Hello Admin</h1>
+<h1><?php echo $title ?></h1>
