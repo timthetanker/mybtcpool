@@ -367,11 +367,11 @@ class Admin_model extends CI_Model
 
             } else {
                 //user not found or authorized to access page
-                return $error1;
+                return false;
             }
         }
         //Sessions Not Set
-        return $error2;
+        return false;
     }
 
     public function logout()

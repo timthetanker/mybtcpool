@@ -1,15 +1,17 @@
 <?php
 
 
-class Pages extends CI_Controller {
-    public function index($page = 'index'){
-        if(!file_exists(APPPATH.'/views/pages/'.$page.'.php')){
+class Pages extends CI_Controller
+{
+    public function index($page = 'index')
+    {
+        if (!file_exists(APPPATH . '/views/pages/' . $page . '.php')) {
             echo 'error';
             show_404();
         }
         $data['title'] = $page;
         $this->load->view('templates/header', $data);
-        $this->load->view('pages/'.$page, $data);
+        $this->load->view('pages/' . $page, $data);
         $this->load->view('templates/footer', $data);
     }
 
@@ -17,7 +19,7 @@ class Pages extends CI_Controller {
     public function contact($page = 'contact')
     {
         #todo setup email  usage
-        if(!file_exists(APPPATH . '/views/pages/' . $page . '.php')){
+        if (!file_exists(APPPATH . '/views/pages/' . $page . '.php')) {
             echo 'error';
             show_404();
         }
@@ -45,14 +47,5 @@ class Pages extends CI_Controller {
         }
         //Either you can print value or you can send value to database
         //echo json_encode($data);
-    }
-
-    public function adminIndex($page = 'index')
-    {
-
-        $data['title'] = $page;
-        $this->load->view('templates/header', $data);
-        $this->load->view('admin/login');
-        $this->load->view('templates/footer', $data);
     }
 }

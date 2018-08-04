@@ -7,41 +7,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Admin Login</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?= base_url() ?>resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="<?= base_url() ?>resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"
-          type="text/css">
-
-    <!-- Plugin CSS -->
-    <link href="<?= base_url() ?>resources/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="<?= base_url() ?>resources/css/sb-admin.css" rel="stylesheet">
-    <style>
-        h2 {
-            color: white;
-        }
-
-        p {
-            color: red;
-        }
-    </style>
 </head>
 
 <body>
 <div class="container">
 
-    <?php echo form_open('admin/login'); ?>
+    <?php echo form_open('admin/login', '', ''); ?>
     <h2 class="form-signin-heading">Please sign in</h2>
 
     <input type="username" name="username" class="form-control" placeholder="Username" required autofocus>
@@ -53,19 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php echo form_close(); ?>
 </div> <!-- /container -->
 
-<!-- Bootstrap core JavaScript -->
-<script src="<?= base_url() ?>resources/vendor/jquery/jquery.min.js"></script>
-<script src="<?= base_url() ?>resources/vendor/tether/tether.min.js"></script>
-<script src="<?= base_url() ?>resources/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="<?= base_url() ?>resources/vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="<?= base_url() ?>resources/vendor/chart.js/Chart.min.js"></script>
-<script src="<?= base_url() ?>resources/vendor/datatables/jquery.dataTables.js"></script>
-<script src="<?= base_url() ?>resources/vendor/datatables/dataTables.bootstrap4.js"></script>
-
-<!-- Custom scripts for this template -->
-<script src="<?= base_url() ?>resources/js/sb-admin.min.js"></script>
 
 </body>
 
